@@ -15,3 +15,13 @@
   cursor: -webkit-grab;
   background-color: gainsboro;
 }
+
+.fa.fa-edit {
+  color: #18a2b9;
+  padding-right: 10px;
+}
+
+.fa.fa-minus-circle {
+  color: red;
+  padding-right: 10px;
+}

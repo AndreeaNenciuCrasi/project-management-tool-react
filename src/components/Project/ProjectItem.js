@@ -16,15 +16,19 @@ class ProjectItem extends Component {
             <div className="col-md-4 d-none d-lg-block">
               <ul className="list-group">
                 <a href="#">
-                  <li className="list-group-item board">Project Board</li>
+                  <li className="list-group-item board">
+                    <i class="fa fa-flag-checkered pr-1">Project Board </i>
+                  </li>
                 </a>
                 <a href="#">
                   <li className="list-group-item update">
-                    Update Project Info
+                    <i class="fa fa-edit pr-1">Update Project Info</i>
                   </li>
                 </a>
                 <a href="">
-                  <li className="list-group-item delete">Delete Project</li>
+                  <li className="list-group-item delete">
+                    <i class="fa fa-minus-circle pr-1">Delete Project</i>
+                  </li>
                 </a>
               </ul>
             </div>
