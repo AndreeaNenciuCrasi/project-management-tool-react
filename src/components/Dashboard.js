@@ -15,6 +15,7 @@ class Dashboard extends Component {
               </a>
 
               <hr></hr>
+              <ProjectItem />
             </div>
           </div>
         </div>
