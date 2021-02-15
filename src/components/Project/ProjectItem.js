@@ -17,17 +17,17 @@ class ProjectItem extends Component {
               <ul className="list-group">
                 <a href="#">
                   <li className="list-group-item board">
-                    <i class="fa fa-flag-checkered pr-1">Project Board </i>
+                    <i class="fa fa-flag-checkered pr-1"> Project Board </i>
                   </li>
                 </a>
                 <a href="#">
                   <li className="list-group-item update">
-                    <i class="fa fa-edit pr-1">Update Project Info</i>
+                    <i class="fa fa-edit pr-1"> Update Project Info</i>
                   </li>
                 </a>
                 <a href="">
                   <li className="list-group-item delete">
-                    <i class="fa fa-minus-circle pr-1">Delete Project</i>
+                    <i class="fa fa-minus-circle pr-1"> Delete Project</i>
                   </li>
                 </a>
               </ul>
