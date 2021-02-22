@@ -70,19 +70,12 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
-                      "is-invalid": errors.projectIdentifier,
-                    })}
+                    className="form-control form-control-lg"
                     placeholder="Unique Project ID"
                     name="projectIdentifier"
                     value={this.state.projectIdentifier}
                     onChange={this.handleChange}
                   />
-                  {errors.projectIdentifier && (
-                    <div className="invalid-feedback">
-                      {errors.projectIdentifier}
-                    </div>
-                  )}
                 </div>
 
                 <div className="form-group">
