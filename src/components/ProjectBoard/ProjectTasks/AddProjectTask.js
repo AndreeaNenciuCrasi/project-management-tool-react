@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 class AddProjectTask extends Component {
     constructor(props) {
-        super();
+        super(props);
         const { id } = this.props.match.params;
         this.state = {
             "summary": "",
@@ -18,6 +18,11 @@ class AddProjectTask extends Component {
             "projectIdentifier": id,
             "errors": {}
         }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({[e.target.name]: e.target.value})
     }
         
      render() {
@@ -38,36 +43,41 @@ class AddProjectTask extends Component {
                                         className="form-control form-control-lg"
                                         name="summary"
                                         placeholder="Project Task summary"
-                                        value={this.state.summary}/>
+                                        value={this.state.summary}
+                                        onChange={this.handleChange}/>
                         </div>
                         <div className="form-group">
                                     <textarea className="form-control form-control-lg"
                                         placeholder="Acceptance Criteria"
                                         name="acceptanceCriteria"
-                                        value={this.state.acceptanceCriteria}></textarea>
+                                        value={this.state.acceptanceCriteria}
+                                        onChange={this.handleChange}></textarea>
                         </div>
                         <h6>Due Date</h6>
                         <div className="form-group">
                                     <input type="date"
                                         className="form-control form-control-lg"
                                         name="dueDate"
-                                        value={this.state.dueDate}/>
+                                        value={this.state.dueDate}
+                                        onChange={this.handleChange}/>
                         </div>
                         <div className="form-group">
                                     <select className="form-control form-control-lg"
                                         name="priority"
-                                        value={this.state.priority}>
-                                <option value="{0}">Select Priority</option>
-                                <option value="{1}">High</option>
-                                <option value="{2}">Medium</option>
-                                <option value="{3}">Low</option>
+                                        value={this.state.priority}
+                                        onChange={this.handleChange}>
+                                <option value={0}>Select Priority</option>
+                                <option value={1}>High</option>
+                                <option value={2}>Medium</option>
+                                <option value={3}>Low</option>
                             </select>
                         </div>
 
                         <div className="form-group">
                                     <select className="form-control form-control-lg"
                                         name="status"
-                                        value={this.state.status}>
+                                        value={this.state.status}
+                                        onChange={this.handleChange}>
                                 <option value="">Select Status</option>
                                 <option value="TO_DO">TO DO</option>
                                 <option value="IN_PROGRESS">IN PROGRESS</option>
