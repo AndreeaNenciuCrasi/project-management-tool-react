@@ -19,10 +19,23 @@ class AddProjectTask extends Component {
             "errors": {}
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
         this.setState({[e.target.name]: e.target.value})
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const newTask = {
+            "summary": this.state.summary,
+            "acceptanceCriteria": this.state.acceptanceCriteria,
+            "status": this.state.status,
+            "priority": this.state.priority,
+            "dueDate": this.state.dueDate,
+        }
+        console.log(newTask);
     }
         
      render() {
@@ -37,7 +50,7 @@ class AddProjectTask extends Component {
                     </Link>
                     <h4 className="display-4 text-center">Add Project Task</h4>
                     <p className="lead text-center">Project Name + Project Code</p>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
                                     <input type="text"
                                         className="form-control form-control-lg"
