@@ -24,11 +24,11 @@ class ProjectItem extends Component {
 
             <div className="col-md-4 d-none d-lg-block">
               <ul className="list-group">
-                <a href="#">
+                <Link to={`/projectBoard/${project.projectIdentifier}`}>
                   <li className="list-group-item board">
                     <i class="fa fa-flag-checkered pr-1"> Project Board </i>
                   </li>
-                </a>
+                </Link>
                 <Link to={`/updateProject/${project.projectIdentifier}`}>
                   <li className="list-group-item update">
                     <i class="fa fa-edit pr-1"> Update Project Info</i>
