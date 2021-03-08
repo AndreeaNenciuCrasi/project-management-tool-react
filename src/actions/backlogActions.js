@@ -33,7 +33,7 @@ export const getBacklog = (backlog_id) => async dispatch => {
     }
 }
 
-export const getprojectTask = (backlog_id, pt_id, history) => async dispatch => {
+export const getProjectTask = (backlog_id, pt_id, history) => async dispatch => {
     try {
         const res = await axios.get(`/api/backlog/${backlog_id}/${pt_id}`);
         dispatch({
