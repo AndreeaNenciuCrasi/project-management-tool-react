@@ -17,7 +17,8 @@ class UpdateProjectTask extends Component {
             priority: "",
             dueDate: "",
             projectIdentifier: "",
-            create_At: ""
+            create_At: "",
+            errors: {}
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,6 +29,9 @@ class UpdateProjectTask extends Component {
     }
     
     componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({errors:nextProps.errors})
+        }
         const {
             id,
             projectSequence,
@@ -74,7 +78,7 @@ class UpdateProjectTask extends Component {
     }
 
      render() {
-        
+         const { errors } = this.state;
         return (
     <div classNameName="add-PBI">
         <div classNameName="container">
@@ -89,12 +93,17 @@ class UpdateProjectTask extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
                                     <input type="text"
-                                        className="form-control form-control-lg"
+                                        className={classnames("form-control form-control-lg", {
+                                            "is-invalid":errors.summary
+                                        })}
                                         name="summary"
                                         placeholder="Project Task summary"
                                         value={this.state.summary}
                                         onChange={this.handleChange}
                                     />
+                                    {errors.summary && (
+                                        <div className="invalid-feedback">{errors.summary}</div>
+                                        )}
                         </div>
                         <div className="form-group">
                                     <textarea className="form-control form-control-lg"
