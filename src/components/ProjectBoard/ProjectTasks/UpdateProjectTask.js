@@ -5,7 +5,11 @@ import classnames from 'classnames'
 import { PropTypes } from 'prop-types'
 import {getProjectTask} from '../../../actions/backlogActions'
 
- class UpdateProjectTask extends Component {
+class UpdateProjectTask extends Component {
+    componentDidMount() {
+        const { backlog_id, pt_id } = this.props.match.params;
+        this.props.getProjectTask(backlog_id, pt_id, this.props.history);
+     }
      render() {
         const { id } = this.props.match.params;
         return (
