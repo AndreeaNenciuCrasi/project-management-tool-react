@@ -20,6 +20,7 @@ class UpdateProjectTask extends Component {
             create_At: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount() {
         const { backlog_id, pt_id } = this.props.match.params;
@@ -56,6 +57,21 @@ class UpdateProjectTask extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        const updateProjectTask = {
+            id: this.state.id,
+            projectSequence: this.state.projectSequence,
+            summary: this.state.summary,
+            acceptanceCriteria: this.state.acceptanceCriteria,
+            status: this.state.status,
+            priority: this.state.priority,
+            dueDate: this.state.dueDate,
+            projectIdentifier: this.state.projectIdentifier,
+            create_At: this.state.create_At
+        }
+        console.log(updateProjectTask);
+    }
 
      render() {
         const { id } = this.props.match.params;
@@ -70,7 +86,7 @@ class UpdateProjectTask extends Component {
                     <h4 className="display-4 text-center">Update Project Task</h4>
                             <p className="lead text-center">Project Name: {this.state.projectIdentifier} |
                     Project Task ID: {this.state.projectSequence}</p>
-                    <form onsubmit="{this.onSubmit}">
+                    <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
                                     <input type="text"
                                         className="form-control form-control-lg"
