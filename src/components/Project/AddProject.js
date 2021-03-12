@@ -55,7 +55,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control form-control-lg inner-card", {
                       "is-invalid": errors.projectName,
                     })}
                     placeholder="Project Name"
@@ -70,7 +70,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control form-control-lg inner-card", {
                       "is-invalid": errors.projectIdentifier,
                     })}
                     placeholder="Unique Project ID"
@@ -87,7 +87,7 @@ class AddProject extends Component {
 
                 <div className="form-group">
                   <textarea
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control form-control-lg inner-card", {
                       "is-invalid": errors.description,
                     })}
                     placeholder="Project Description"
@@ -103,7 +103,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="date"
-                    className="form-control form-control-lg"
+                    className="form-control form-control-lg inner-card"
                     name="start_date"
                     value={this.state.start_date}
                     onChange={this.handleChange}
@@ -113,7 +113,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="date"
-                    className="form-control form-control-lg"
+                    className="form-control form-control-lg inner-card"
                     name="end_date"
                     value={this.state.end_date}
                     onChange={this.handleChange}

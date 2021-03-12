@@ -1,8 +1,5 @@
 body {
-  background: url("./resources/sand3.jpg");
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+  background: url("./resources/wall5.jpeg");
 }
 .navbar {
   background-color: #e3f2fd;
@@ -30,4 +27,36 @@ body {
 .fa.fa-minus-circle {
   color: red;
   padding-right: 10px;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.floating-card {
+  background: url("./resources/paper-page-background-texture.jpg");
+  /* background-color: #059033 !important; */
+  -webkit-box-shadow: 20px 20px 10px 0px grey;
+  -moz-box-shadow: 20px 20px 10px 0px grey;
+  box-shadow: 20px 20px 10px 0px grey;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.inner-card {
+  background: url("./resources/istockphoto-181471302-612x612.jpg");
+  color: black !important;
+  /* -webkit-box-shadow: inset 0px 0px 6px aqua;
+  -moz-box-shadow: inset 0px 0px 6px aqua;
+  box-shadow: inset 0px 0px 6px aqua; */
+}
+
+.validation-border {
+  border: aqua;
+}
+
+.update-inner-card {
+  -webkit-box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
+  -moz-box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
+  box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
 }
