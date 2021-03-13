@@ -93,7 +93,7 @@ class UpdateProjectTask extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
                                     <input type="text"
-                                        className={classnames("form-control form-control-lg update-inner-card", {
+                                        className={classnames("form-control form-control-lg inner-card", {
                                             "is-invalid":errors.summary
                                         })}
                                         name="summary"
@@ -106,7 +106,7 @@ class UpdateProjectTask extends Component {
                                         )}
                         </div>
                         <div className="form-group">
-                                    <textarea className="form-control form-control-lg no-border update-inner-card"
+                                    <textarea className="form-control form-control-lg no-border inner-card"
                                         placeholder="Acceptance Criteria"
                                         name="acceptanceCriteria"
                                         value={this.state.acceptanceCriteria}
@@ -116,14 +116,14 @@ class UpdateProjectTask extends Component {
                         <h6>Due Date</h6>
                         <div className="form-group">
                                     <input type="date"
-                                        className="form-control form-control-lg no-border update-inner-card"
+                                        className="form-control form-control-lg no-border inner-card"
                                         name="dueDate"
                                         value={this.state.dueDate}
                                         onChange={this.handleChange}
                                     />
                         </div>
                         <div className="form-group">
-                                    <select className="form-control form-control-lg no-border update-inner-card"
+                                    <select className="form-control form-control-lg no-border inner-card"
                                         name="priority"
                                         value={this.state.priority}
                                         onChange={this.handleChange}
@@ -136,7 +136,7 @@ class UpdateProjectTask extends Component {
                         </div>
 
                         <div className="form-group">
-                                    <select className="form-control form-control-lg no-border update-inner-card"
+                                    <select className="form-control form-control-lg no-border inner-card"
                                         name="status"
                                         value={this.state.status}
                                         onChange={this.handleChange}

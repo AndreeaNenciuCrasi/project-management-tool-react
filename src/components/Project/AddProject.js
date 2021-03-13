@@ -103,7 +103,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="date"
-                    className="form-control form-control-lg inner-card"
+                    className="form-control form-control-lg no-border inner-card"
                     name="start_date"
                     value={this.state.start_date}
                     onChange={this.handleChange}
@@ -113,7 +113,7 @@ class AddProject extends Component {
                 <div className="form-group">
                   <input
                     type="date"
-                    className="form-control form-control-lg inner-card"
+                    className="form-control form-control-lg no-border inner-card"
                     name="end_date"
                     value={this.state.end_date}
                     onChange={this.handleChange}

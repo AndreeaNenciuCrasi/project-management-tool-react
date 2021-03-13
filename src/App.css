@@ -35,28 +35,33 @@ body {
 
 .floating-card {
   background: url("./resources/paper-page-background-texture.jpg");
-  /* background-color: #059033 !important; */
   -webkit-box-shadow: 20px 20px 10px 0px grey;
   -moz-box-shadow: 20px 20px 10px 0px grey;
   box-shadow: 20px 20px 10px 0px grey;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.project-card {
+  border-top: 15px solid teal !important;
 }
 
 .inner-card {
   background: url("./resources/istockphoto-181471302-612x612.jpg");
   color: black !important;
-  /* -webkit-box-shadow: inset 0px 0px 6px aqua;
-  -moz-box-shadow: inset 0px 0px 6px aqua;
-  box-shadow: inset 0px 0px 6px aqua; */
 }
 
-.validation-border {
-  border: aqua;
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(59, 55, 55) !important;
 }
 
-.update-inner-card {
-  -webkit-box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
-  -moz-box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
-  box-shadow: inset 0px 0px 6px rgb(18, 240, 48);
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(59, 55, 55);
+}
+
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(59, 55, 55);
 }

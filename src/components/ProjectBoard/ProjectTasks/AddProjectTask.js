@@ -58,24 +58,24 @@ class AddProjectTask extends Component {
                     <h4 className="display-4 text-center">Add Project Task</h4>
                     <p className="lead text-center">Project Name: {this.state.projectIdentifier} </p>
                             <form onSubmit={this.handleSubmit}>
-                            <h6>Project Task summary</h6>
+                            
                         <div className="form-group">
                                     <input type="text"
-                                        className={classnames("form-control form-control-lg inner-card validation-border", {
+                                        className={classnames("form-control form-control-lg inner-card", {
                                             "is-invalid": errors.summary
                                         })}
                                         name="summary"
-                                        // placeholder="Project Task summary"
+                                        placeholder="Project Task summary"
                                         value={this.state.summary}
                                         onChange={this.handleChange} />
                                     {errors.summary && (
                                     <div className="invalid-feedback">{errors.summary}</div>
                                 )}
                                 </div>
-                                <h6>Acceptance Criteria</h6>        
+                                        
                         <div className="form-group">
                                     <textarea className="form-control form-control-lg no-border inner-card"
-                                        // placeholder="Acceptance Criteria"
+                                        placeholder="Acceptance Criteria"
                                         name="acceptanceCriteria"
                                         value={this.state.acceptanceCriteria}
                                         onChange={this.handleChange}></textarea>
