@@ -15,9 +15,21 @@ class Register extends Component {
             errors: {}
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(e) {
         this.setState({ [e.target.name]: e.target.value });
+      }
+
+      handleSubmit(e) {
+        e.preventDefault();
+        const newUser = {
+            username: this.state.username,
+            fullName: this.state.fullName,
+            password: this.state.password,
+            confirmPassword: this.state.confirmPassword,
+        };
+        this.props.createNewUser(newUser, this.props.history);
       }
     render() {
         return (
@@ -27,7 +39,7 @@ class Register extends Component {
                 <div className="col-md-8 m-auto">
                     <h1 className="display-4 text-center">Sign Up</h1>
                     <p className="lead text-center">Create your Account</p>
-                    <form action="create-profile.html">
+                    <form onSubmit={this.handleSubmit} action="create-profile.html">
                         <div className="form-group">
                             <input type="text" 
                             className="form-control form-control-lg" 
@@ -70,4 +82,12 @@ class Register extends Component {
         )
     }
 }
-export default Register;
+Register.propTypes = {
+    createNewUser: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps =state =>({
+    errors: state.errors
+})
+export default connect(mapStateToProps, {createNewUser})(Register);
