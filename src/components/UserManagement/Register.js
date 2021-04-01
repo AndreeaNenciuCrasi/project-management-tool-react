@@ -47,14 +47,15 @@ class Register extends Component {
     render() {
         const {errors} = this.state;
         return (
-    <div className="register">
-        <div className="container">
+    <div className="register ">
+        <div className="container ">
             <div className="row">
-                <div className="col-md-8 m-auto">
-                    <h1 className="display-4 text-center">Sign Up</h1>
-                    <p className="lead text-center">Create your Account</p>
-                    <form onSubmit={this.handleSubmit} action="create-profile.html">
-                        <div className="form-group">
+                <div className="col-md-8 m-auto login-container">
+                    <h1 className="display-4 text-center text-white">Sign Up</h1>
+                    <p className="lead text-center text-white">Create your Account</p>
+                    <form onSubmit={this.handleSubmit} 
+                    className=" login-input form-margin shadow-lg p-3 mb-5 bg-white rounded">
+                        <div className="form-group">    
                             <input type="text" 
                             className={classnames("form-control form-control-lg", {
                                 "is-invalid": errors.fullName,
