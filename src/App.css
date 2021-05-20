@@ -64,6 +64,10 @@ body {
   margin-bottom: 70px;
 }
 
+.landingTitle{
+  font-size: 100px important!;
+}
+
 
 .login-container{
   background: url("./resources/colorBlue.jpg");
