@@ -17,12 +17,12 @@ class Landing extends Component {
         <div className="light-overlay landing-inner text-dark">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12 text-center">
-                    <div className="col-md-12 landing-container">
-                        <h3 className="landingTitle text-info">Personal Project Management Tool</h3>
-                        <p className="lead text-info">
+                    <div className=" text-center">
+                    <div className=" landing-container">
+                        <h3 className="landingTitle text-class">Personal Project Management Tool</h3>
+                        {/* <p className="lead text-info">
                             Create your account to join active projects or start your own
-                        </p>
+                        </p> */}
                         {/* <hr/> */}
                         <div className="btn-landing-margin">
                         <Link to="/register" className="btn btn-lg btn-info mr-2">
