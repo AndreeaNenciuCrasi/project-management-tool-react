@@ -51,7 +51,7 @@ class Login extends Component {
                 <div className="col-md-8 m-auto login-container">
                     <h1 className="display-4 text-center text-white">Log In</h1>
                     <form onSubmit={this.handleSubmit} 
-                    className="login-input form-margin shadow-lg p-3 mb-5 bg-white rounded">
+                    className="login-input login-form-margin shadow-lg p-3 mb-5 bg-white rounded">
                         <div className="form-group">
                             <input type="text" 
                             className={classnames("form-control form-control-lg", {

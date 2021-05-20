@@ -18,17 +18,22 @@ class Landing extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <h3 className="landingTitle">Personal Project Management Tool</h3>
-                        <p className="lead">
+                    <div className="col-md-12 landing-container">
+                        <h3 className="landingTitle text-info">Personal Project Management Tool</h3>
+                        <p className="lead text-info">
                             Create your account to join active projects or start your own
                         </p>
-                        <hr/>
-                        <Link to="/register" className="btn btn-lg btn-primary mr-2">
+                        {/* <hr/> */}
+                        <div className="btn-landing-margin">
+                        <Link to="/register" className="btn btn-lg btn-info mr-2">
                             Sign Up
                         </Link>
                         <Link to="/login" className="btn btn-lg btn-secondary mr-2">
                             Login
                         </Link>
+                        </div>
+                    </div>
+                        
                         <br></br>
                         <br></br>
         <div class="container">

@@ -67,12 +67,12 @@ class UpdateProject extends Component {
     const { errors } = this.state;
     return (
       <div className="project">
-        <div className="container">
+        <div className="container formBackground2">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h5 className="display-4 text-center">Update Project form</h5>
               <hr></hr>
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.handleSubmit} className="project-forms-margin">
                 <div className="form-group">
                   <input
                     type="text"
@@ -143,7 +143,7 @@ class UpdateProject extends Component {
 
                 <input
                   type="submit"
-                  className="btn btn-primary btn-block mt-4"
+                  className="btn btn-info btn-block mt-4"
                 />
               </form>
             </div>

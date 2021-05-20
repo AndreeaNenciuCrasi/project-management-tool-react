@@ -50,11 +50,11 @@ class Register extends Component {
     <div className="register ">
         <div className="container ">
             <div className="row">
-                <div className="col-md-8 m-auto login-container">
-                    <h1 className="display-4 text-center text-white">Sign Up</h1>
-                    <p className="lead text-center text-white">Create your Account</p>
+                <div className="col-md-8 m-auto register-container">
+                    <h1 className="display-4 text-center text-dark">Sign Up</h1>
+                    <p className="lead text-center text-dark">Create your Account</p>
                     <form onSubmit={this.handleSubmit} 
-                    className=" login-input form-margin shadow-lg p-3 mb-5 bg-white rounded">
+                    className=" login-input register-form-margin shadow-lg p-3 mb-5 bg-white rounded">
                         <div className="form-group">    
                             <input type="text" 
                             className={classnames("form-control form-control-lg", {

@@ -1,5 +1,5 @@
 body {
-  background: url("./resources/wall5.jpeg");
+  background: url("./resources/3b5e7c0b23f541907e4cbeee03c53539.mmexport1503749895409-01-01-01.jpeg");
 }
 .navbar {
   background-color: #e3f2fd;
@@ -38,7 +38,7 @@ body {
 }
 
 .floating-card {
-  background: url("./resources/paper-page-background-texture.jpg");
+  background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
   -webkit-box-shadow: 20px 20px 10px 0px grey;
   -moz-box-shadow: 20px 20px 10px 0px grey;
   box-shadow: 20px 20px 10px 0px grey;
@@ -47,11 +47,12 @@ body {
 }
 
 .project-card {
-  border-top: 15px solid teal !important;
+  border: 15px solid teal !important;
+  background: url("./resources/black-white-grunge-background-old-paper-texture-design-bl-abstract-background-paper-black-white-grunge-background-blank-132292478.jpg");
 }
 
 .inner-card {
-  background: url("./resources/istockphoto-181471302-612x612.jpg");
+  
   color: black !important;
 }
 
@@ -59,9 +60,31 @@ body {
   width: 300px;
 }
 
-.form-margin{
-  margin-left: 50px;
+.register-form-margin{
+  margin-left: 500px;
   margin-bottom: 70px;
+}
+
+.login-form-margin{
+  margin-left: 400px;
+  margin-top: 300px;
+}
+
+.add-task-form-margin{
+  margin-left: 400px;
+}
+
+.btn-margin{
+  margin-left: 200px;
+}
+
+.btn-landing-margin{
+  margin-top: 530px;
+  margin-left:500px;
+}
+
+.project-forms-margin{
+  margin-left: 70px;
 }
 
 .landingTitle{
@@ -69,8 +92,41 @@ body {
 }
 
 
+.register-container{
+  background: url("./resources/550x379.jpg");
+  background-repeat:no-repeat;
+}
+
 .login-container{
-  background: url("./resources/colorBlue.jpg");
+  background: url("./resources/do-not-remove-this-tag-wallpaper-preview.jpg");
+  background-repeat:no-repeat;
+}
+
+.landing-container{
+  background: url("./resources/4431896656_56d2908af7_b-1024x698.jpg.optimal.jpg");
+  background-repeat:no-repeat;
+  margin-left: 50px;
+  height: 900px;
+}
+
+.formBackground1{
+background: url("./resources/images\ \(1\).jpeg");
+background-repeat:no-repeat;
+}
+
+.formBackground2{
+  background: url("./resources/Black-and-white-Trees-Landscapes\ \(1\).jpg");
+  background-repeat:no-repeat;
+}
+
+.formBackground3{
+  background: url("./resources/original.jpg");
+  background-repeat:no-repeat;
+}
+
+.formBackground4{
+  background: url("./resources/d6580543a45d994cc8b0c753e687949f.jpg");
+  background-repeat:no-repeat;
 }
 
 .form-control::placeholder {

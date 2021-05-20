@@ -49,15 +49,19 @@ class AddProjectTask extends Component {
          const { errors } = this.state;
         return (
             <div className="add-PBI">
-            <div className="container">
-            <div className="row">
-                <div className="col-md-8 m-auto">
-                    <Link to={`/projectBoard/${id}`} className="btn btn-light">
+                <div className="container ">
+                <Link to={`/projectBoard/${id}`} className="btn text-light bg-dark btn-margin">
                         Back to Project Board
                     </Link>
+                </div>
+                <br></br>
+            <div className="container formBackground3">
+            <div className="row">
+                <div className="col-md-8 m-auto">
+                    
                     <h4 className="display-4 text-center">Add Project Task</h4>
                     <p className="lead text-center">Project Name: {this.state.projectIdentifier} </p>
-                            <form onSubmit={this.handleSubmit}>
+                            <form onSubmit={this.handleSubmit} className="add-task-form-margin ">
                             
                         <div className="form-group">
                                     <input type="text"
@@ -112,7 +116,7 @@ class AddProjectTask extends Component {
                             </select>
                         </div>
 
-                        <input type="submit" className="btn btn-primary btn-block mt-4"/>
+                        <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
                 </div>
             </div>

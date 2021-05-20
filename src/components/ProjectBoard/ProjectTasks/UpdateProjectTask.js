@@ -82,15 +82,18 @@ class UpdateProjectTask extends Component {
         return (
     <div classNameName="add-PBI">
         <div classNameName="container">
-            <div className="row">
-                <div className="col-md-8 m-auto">
-                    <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn btn-light">
+        <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn text-light bg-dark btn-margin">
                         Back to Project Board
                     </Link>
+        </div>
+        <div classNameName="container formBackground4">
+            <div className="row">
+                <div className="col-md-8 m-auto">
+                    
                     <h4 className="display-4 text-center">Update Project Task</h4>
                             <p className="lead text-center">Project Name: {this.state.projectIdentifier} |
                     Project Task ID: {this.state.projectSequence}</p>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} className="add-task-form-margin">
                         <div className="form-group">
                                     <input type="text"
                                         className={classnames("form-control form-control-lg inner-card", {
@@ -148,7 +151,7 @@ class UpdateProjectTask extends Component {
                             </select>
                         </div>
 
-                        <input type="submit" className="btn btn-primary btn-block mt-4"/>
+                        <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
                 </div>
             </div>
