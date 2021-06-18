@@ -1,6 +1,7 @@
 Project Management Tool
 
 Backend Technologies: Java, Spring Boot, MySql, Junit5, Mockito, MySQL Workbench, Postman.
+Link to backend: https://github.com/AndreeaNenciuCrasi/project-management-tool
 
 Frontend Technologies: Bootstrap, React, Redux
 
