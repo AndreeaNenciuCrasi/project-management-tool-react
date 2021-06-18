@@ -35,8 +35,8 @@ class Landing extends Component {
                     </div>
                         
                         <br></br>
-                        <br></br>
-        <div class="container">
+                        <br></br> 
+         <div class="container">
         <div class="row">
             <div class="col order-last">
             <iframe width="520" height="275" src="https://www.youtube.com/embed/EG16dFYK0gw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
