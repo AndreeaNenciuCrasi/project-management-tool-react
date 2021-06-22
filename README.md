@@ -23,7 +23,7 @@ Log In page:
 
 
 DashBoard:
-![Dashboard](https://user-images.githubusercontent.com/50443910/122561943-1e099080-d04b-11eb-9a12-7f130b5920af.png)
+![dashboard](https://user-images.githubusercontent.com/50443910/122893595-231e5680-d34f-11eb-9730-72c4a5a726b3.png)
 
 
 
