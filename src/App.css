@@ -1,23 +1,6 @@
 body {
   background: url("./resources/3b5e7c0b23f541907e4cbeee03c53539.mmexport1503749895409-01-01-01.jpeg");
 }
-.navbar {
-  background-color: #e3f2fd;
-}
-.list-group-item.delete:hover {
-  cursor: -webkit-grab;
-  background-color: pink;
-}
-
-.list-group-item.update:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
-}
-
-.list-group-item.board:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
-}
 
 .fa.fa-edit {
   color: #18a2b9;
@@ -42,7 +25,16 @@ body {
   margin-bottom: 0.5%;
 }
 
-.floating-card {
+.floating-card-task{
+  background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
+  -webkit-box-shadow: 20px 20px 10px 0px grey;
+  -moz-box-shadow: 20px 20px 10px 0px grey;
+  box-shadow: 20px 20px 10px 0px grey;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.floating-card-project {
   background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
   -webkit-box-shadow: 20px 20px 10px 0px grey;
   -moz-box-shadow: 20px 20px 10px 0px grey;
@@ -50,15 +42,9 @@ body {
   margin-bottom: 10%;
 }
 
-.project-card {
-  /* border: 15px solid teal !important; */
-  background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
-}
-
 .project-buttons-set{
   width: 210px;
 }
-
 
 .inner-card {
   color: black !important;

@@ -29,7 +29,7 @@ class ProjectTask extends Component {
          }
          
         return (
-            <div className="card mb-1 no-border floating-card opacity">
+            <div className="card mb-1 no-border floating-card-task opacity">
 
                 <div className={`card-header text-primary ${priorityClass}`}>
                 ID: {project_task.projectSequence} -- Priority:{priorityString}

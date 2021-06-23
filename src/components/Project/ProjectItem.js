@@ -14,7 +14,7 @@ class ProjectItem extends Component {
       
       <div className="container">
         <div className="container bg-info text-info rounded-top project-teal-line">Project</div>
-        <div className="card card-body mb-3 opacity floating-card project-card no-border">
+        <div className="card card-body mb-3 opacity floating-card-project no-border">
           <div className="row">
             <div className="col-2">
               <span className="mx-auto font-weight-bold">{project.projectIdentifier}</span>
