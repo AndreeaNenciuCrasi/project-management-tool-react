@@ -47,9 +47,14 @@ body {
 }
 
 .project-card {
-  border: 15px solid teal !important;
+  /* border: 15px solid teal !important; */
   background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
 }
+
+.project-buttons-set{
+  width: 210px;
+}
+
 
 .inner-card {
   color: black !important;
