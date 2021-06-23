@@ -37,13 +37,17 @@ body {
   opacity: 0.8;
 }
 
+.project-teal-line{
+  margin-top: 5%;
+  margin-bottom: 0.5%;
+}
+
 .floating-card {
   background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
   -webkit-box-shadow: 20px 20px 10px 0px grey;
   -moz-box-shadow: 20px 20px 10px 0px grey;
   box-shadow: 20px 20px 10px 0px grey;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
 .project-card {

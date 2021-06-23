@@ -11,7 +11,9 @@ class ProjectItem extends Component {
   render() {
     const { project } = this.props;
     return (
+      
       <div className="container">
+        <div className="container bg-info text-info rounded-top project-teal-line">Project</div>
         <div className="card card-body mb-3 opacity floating-card project-card no-border">
           <div className="row">
             <div className="col-2">
@@ -30,7 +32,7 @@ class ProjectItem extends Component {
               
             </div>
 
-            <div className="col-md-4 d-none d-lg-block">
+            <div className="col-md-4 d-none d-lg-block px-md-5">
               <ul className="list-group project-buttons-set">
                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
                   <li className="list-group-item text-dark bg-transparent border border-dark rounded">
