@@ -20,6 +20,13 @@ class ProjectItem extends Component {
             <div className="col-lg-6 col-md-4 col-8">
               <h3>{project.projectName}</h3>
               <p>{project.description}</p>
+              {project.start_date &&
+              <p>Start date: {project.start_date}</p>}
+              
+              {project.end_date &&
+              <p>End date: <span className="text-danger">{project.end_date}</span></p>
+              }
+              
             </div>
 
             <div className="col-md-4 d-none d-lg-block">
