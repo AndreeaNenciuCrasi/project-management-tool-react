@@ -129,6 +129,28 @@ background-repeat:no-repeat;
   background-repeat:no-repeat;
 }
 
+.bg-userProfile1{
+  background: url("./resources/girl-face.jpg");
+  background-repeat:no-repeat;
+  margin-top: 30px;
+  width: 100px;
+  height: 500px;
+}
+
+.bg-userProfile2{
+  background: url("./resources/girl.png");
+  background-repeat:no-repeat;
+  margin-top: 30px;
+  width: 100px;
+  height: 500px;
+}
+
+.bg-text-userProfile{
+    margin-top: 200px !important;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
 .form-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(59, 55, 55) !important;
