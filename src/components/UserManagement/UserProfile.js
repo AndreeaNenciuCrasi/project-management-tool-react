@@ -12,12 +12,36 @@ class UserProfile extends Component {
             "username": "",
             "fullName": "",
             "password": "",
-            "notes": ""
+            "notes": "",
+            "errors":{}
         }
     }
 
     componentDidMount() {
         this.props.getCurrentUser(this.props.history);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({errors:nextProps.errors})
+        }
+        const {
+            username,
+            fullName,
+            password,
+            notes,
+        } = nextProps.current_user;
+
+        this.setState({
+            username,
+            fullName,
+            password,
+            notes,
+        })
+    }
+
+    handleChange(e) {
+        this.setState({[e.target.name]: e.target.value})
     }
 
     render() {
@@ -35,21 +59,21 @@ class UserProfile extends Component {
                             <input type="text" 
                             placeholder="Name" 
                             name="fullName"
-                            // value={user.fullName}
+                            value={this.state.fullName}
                             />
                         </div>
                         <div className="form-group">
                             <input type="text" 
                             placeholder="Email Address" 
                             name="username"
-                            // value={user.username}
+                            value={this.state.username}
                             />
                         </div>
                         <div className="form-group">
                             <textarea type="text" 
                             placeholder="notes" 
                             name="notes"
-                            // value={user.notes}
+                            value={this.state.notes}
                             />
                         </div>
                         <div className="form-group">
