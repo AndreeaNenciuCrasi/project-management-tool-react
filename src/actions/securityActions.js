@@ -48,3 +48,20 @@ export const logout =()=>dispatch =>{
         payload: {}
     })
 }
+
+export const updateUser = (updatedUser, history) => async dispatch => {
+    try {
+         await axios.patch("/api/users/update", updatedUser);
+        history.push("/dashboard");
+        dispatch({
+            type: GET_ERRORS,
+            payload:{}
+        })
+    } catch (err) {
+        dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+        })
+        
+    }
+}
