@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import classnames from 'classnames'
+import classnames from 'classnames';
+import {getCurrentUser, updateCurrentUser} from "../../actions/securityActions";
 
 class UserProfile extends Component {
+
+    constructor(){
+        super();
+        this.state={
+            "username": "",
+            "fullName": "",
+            "password": "",
+            "notes": ""
+        }
+    }
+
+    componentDidMount() {
+        this.props.getCurrentUser(this.props.history);
+    }
+
     render() {
-        const {user} = this.props.security;
-        console.log(user);
+        // const {user} = this.props.security;
+        // console.log(user);
         return (
         <div className="container">
             <div className="row">
@@ -19,21 +35,21 @@ class UserProfile extends Component {
                             <input type="text" 
                             placeholder="Name" 
                             name="fullName"
-                            value={user.fullName}
+                            // value={user.fullName}
                             />
                         </div>
                         <div className="form-group">
                             <input type="text" 
                             placeholder="Email Address" 
                             name="username"
-                            value={user.username}
+                            // value={user.username}
                             />
                         </div>
                         <div className="form-group">
-                            <input type="text" 
+                            <textarea type="text" 
                             placeholder="notes" 
                             name="notes"
-                            value={user.notes}
+                            // value={user.notes}
                             />
                         </div>
                         <div className="form-group">
@@ -45,12 +61,6 @@ class UserProfile extends Component {
                         
                         <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
-                        {/* <h4>
-                                Full Name </h4>
-                                <h5>{user.fullName} </h5>
-                        <br></br>
-                        <h4>Email/Username</h4>
-                        <h5>{user.username}</h5> */}
                     </div>
                     
                 </div>
@@ -77,15 +87,20 @@ class UserProfile extends Component {
 }
 
 UserProfile.propTypes = {
-    security: PropTypes.object.isRequired
+    getCurrentUser: PropTypes.func.isRequired,
+    security: PropTypes.object.isRequired,
+    updateCurrentUser: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired
   };
   
   const mapStateToProps = state => ({
-    security: state.security
+    security: state.security,
+    current_user: state.security.current_user,
+    errors: state.errors
   });
   
   
-  export default connect(mapStateToProps, {})(UserProfile);
+  export default connect(mapStateToProps, {getCurrentUser, updateCurrentUser})(UserProfile);
   
 
 
