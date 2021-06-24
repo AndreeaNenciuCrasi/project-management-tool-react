@@ -48,19 +48,19 @@ class AddProjectTask extends Component {
          const { id } = this.props.match.params;
          const { errors } = this.state;
         return (
-            <div className="add-PBI">
+            <div className="">
                 <div className="container ">
-                <Link to={`/projectBoard/${id}`} className="btn text-light bg-dark btn-margin">
+                <Link to={`/projectBoard/${id}`} className="btn text-light bg-dark">
                         Back to Project Board
-                    </Link>
+                    </Link>    
                 </div>
                 <br></br>
             <div className="container formBackground3">
             <div className="row">
                 <div className="col-md-8 m-auto">
                     
-                    <h4 className="display-4 text-center no-border">Add Project Task</h4>
-                    <p className="lead text-center">Project Name: {this.state.projectIdentifier} </p>
+                    <h4 className="display-4 text-right no-border">Add Project Task</h4>
+                    <p className="lead text-right">Project Name: {this.state.projectIdentifier} </p>
                             <form onSubmit={this.handleSubmit} className="add-task-form-margin ">
                             
                         <div className="form-group">

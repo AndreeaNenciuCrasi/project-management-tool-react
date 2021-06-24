@@ -40,13 +40,13 @@ class ProjectItem extends Component {
                   </li>
                 </Link>
                 <Link to={`/updateProject/${project.projectIdentifier}`}>
-                  <li className="list-group-item update bg-transparent border border-dark rounded">
+                  <li className="list-group-item bg-transparent border border-dark rounded">
                     <i class="fa fa-edit pr-1"> </i> Update Project Info
                   </li>
                 </Link>
 
                 <li
-                  className="list-group-item delete text-dark bg-transparent border border-dark rounded"
+                  className="list-group-item text-dark bg-transparent border border-dark rounded"
                   onClick={this.onDeleteClick.bind(
                     this,
                     project.projectIdentifier
