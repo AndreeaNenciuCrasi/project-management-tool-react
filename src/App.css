@@ -151,6 +151,10 @@ background-repeat:no-repeat;
     margin-right: 7px;
 }
 
+.btn-font-family{
+  font-family: Roboto sans-serif;
+}
+
 .form-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(59, 55, 55) !important;

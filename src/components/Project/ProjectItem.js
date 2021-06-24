@@ -36,23 +36,23 @@ class ProjectItem extends Component {
               <ul className="list-group project-buttons-set">
                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
                   <li className="list-group-item text-dark bg-transparent border border-dark rounded">
-                    <i class="fa fa-flag-checkered pr-1"> Project Board </i>
+                    <i class="fa fa-flag-checkered pr-1"> </i> Project Board
                   </li>
                 </Link>
                 <Link to={`/updateProject/${project.projectIdentifier}`}>
                   <li className="list-group-item update bg-transparent border border-dark rounded">
-                    <i class="fa fa-edit pr-1"> Update Project Info</i>
+                    <i class="fa fa-edit pr-1"> </i> Update Project Info
                   </li>
                 </Link>
 
                 <li
-                  className="list-group-item delete text-secondary bg-transparent border border-dark rounded"
+                  className="list-group-item delete text-dark bg-transparent border border-dark rounded"
                   onClick={this.onDeleteClick.bind(
                     this,
                     project.projectIdentifier
                   )}
                 >
-                  <i class="fa fa-minus-circle pr-1"> Delete Project</i>
+                  <i class="fa fa-minus-circle pr-1"> </i> Delete Project
                 </li>
               </ul>
             </div>
