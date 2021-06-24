@@ -1,6 +1,6 @@
 import axios from "axios";
 import setJWTToken from "../securityUtils/setJWTToken";
-import { GET_ERRORS, SET_CURRENT_USER } from "./types";
+import { GET_CURRENT_USER, GET_ERRORS, SET_CURRENT_USER } from "./types";
 import jwt_decode from "jwt-decode";
 
 export const createNewUser =(newUser, history) => async dispatch =>{
@@ -49,7 +49,19 @@ export const logout =()=>dispatch =>{
     })
 }
 
-export const updateUser = (updatedUser, history) => async dispatch => {
+export const getCurrentUser = (history) => async dispatch => {
+    try {
+        const res = await axios.get("api/users/user");
+        dispatch({
+            type: GET_CURRENT_USER,
+            payload:res.data
+        })
+    } catch (err) {
+        history.push("/dashboard");
+    }
+}
+
+export const updateCurrentUser = (updatedUser, history) => async dispatch => {
     try {
          await axios.patch("/api/users/update", updatedUser);
         history.push("/dashboard");
