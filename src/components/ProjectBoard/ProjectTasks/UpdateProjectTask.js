@@ -80,83 +80,86 @@ class UpdateProjectTask extends Component {
      render() {
          const { errors } = this.state;
         return (
-    <div classNameName="add-PBI">
+    <div classNameName="">
         <div classNameName="container">
-        <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn text-light bg-dark btn-margin">
+                <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn text-light bg-dark btn-margin">
                         Back to Project Board
                     </Link>
         </div>
-        <div classNameName="container formBackground4">
-            <div className="row">
-                <div className="col-md-8 m-auto">
-                    
-                    <h4 className="display-4 text-center">Update Project Task</h4>
-                            <p className="lead text-center">Project Name: {this.state.projectIdentifier} |
-                    Project Task ID: {this.state.projectSequence}</p>
+        <br></br>
+        <div classNameName="container border">
+        <div class="row">
+            <div class="col formBackground4"></div>
+            <div class="col update-form">
+            <h4 className="display-4 text-right no-border">Update Project Task</h4>
+            <p className="lead text-right">Project Name: {this.state.projectIdentifier} |
+            Project Task ID: {this.state.projectSequence}</p>
+
                     <form onSubmit={this.handleSubmit} className="add-task-form-margin">
-                        <div className="form-group">
-                                    <input type="text"
-                                        className={classnames("form-control form-control-lg inner-card", {
-                                            "is-invalid":errors.summary
-                                        })}
-                                        name="summary"
-                                        placeholder="Project Task summary"
-                                        value={this.state.summary}
-                                        onChange={this.handleChange}
-                                    />
-                                    {errors.summary && (
-                                        <div className="invalid-feedback">{errors.summary}</div>
-                                        )}
-                        </div>
-                        <div className="form-group">
-                                    <textarea className="form-control form-control-lg no-border inner-card"
-                                        placeholder="Acceptance Criteria"
-                                        name="acceptanceCriteria"
-                                        value={this.state.acceptanceCriteria}
-                                        onChange={this.handleChange}
-                                    ></textarea>
-                        </div>
-                        <h6>Due Date</h6>
-                        <div className="form-group">
-                                    <input type="date"
-                                        className="form-control form-control-lg no-border inner-card"
-                                        name="dueDate"
-                                        value={this.state.dueDate}
-                                        onChange={this.handleChange}
-                                    />
-                        </div>
-                        <div className="form-group">
-                                    <select className="form-control form-control-lg no-border inner-card"
-                                        name="priority"
-                                        value={this.state.priority}
-                                        onChange={this.handleChange}
-                                    >
-                                <option value={0}>Select Priority</option>
-                                <option value={1}>High</option>
-                                <option value={2}>Medium</option>
-                                <option value={3}>Low</option>
-                            </select>
-                        </div>
+                    <div className="form-group">
+                    <input type="text"
+                    className={classnames("form-control form-control-lg inner-card", {
+                    "is-invalid":errors.summary
+                    })}
+                    name="summary"
+                    placeholder="Project Task summary"
+                    value={this.state.summary}
+                    onChange={this.handleChange}
+                    />
+                    {errors.summary && (
+                    <div className="invalid-feedback">{errors.summary}</div>
+                    )}
+                    </div>
+                    <div className="form-group">
+                    <textarea className="form-control form-control-lg no-border inner-card"
+                    placeholder="Acceptance Criteria"
+                    name="acceptanceCriteria"
+                    value={this.state.acceptanceCriteria}
+                    onChange={this.handleChange}
+                    ></textarea>
+                    </div>
+                    <h6>Due Date</h6>
+                    <div className="form-group">
+                    <input type="date"
+                    className="form-control form-control-lg no-border inner-card"
+                    name="dueDate"
+                    value={this.state.dueDate}
+                    onChange={this.handleChange}
+                    />
+                    </div>
+                    <div className="form-group">
+                    <select className="form-control form-control-lg no-border inner-card"
+                    name="priority"
+                    value={this.state.priority}
+                    onChange={this.handleChange}
+                    >
+                    <option value={0}>Select Priority</option>
+                    <option value={1}>High</option>
+                    <option value={2}>Medium</option>
+                    <option value={3}>Low</option>
+                    </select>
+                    </div>
 
-                        <div className="form-group">
-                                    <select className="form-control form-control-lg no-border inner-card"
-                                        name="status"
-                                        value={this.state.status}
-                                        onChange={this.handleChange}
-                                    >
-                                <option value="">Select Status</option>
-                                <option value="TO_DO">TO DO</option>
-                                <option value="IN_PROGRESS">IN PROGRESS</option>
-                                <option value="DONE">DONE</option>
-                            </select>
-                        </div>
+                    <div className="form-group">
+                    <select className="form-control form-control-lg no-border inner-card"
+                    name="status"
+                    value={this.state.status}
+                    onChange={this.handleChange}
+                    >
+                    <option value="">Select Status</option>
+                    <option value="TO_DO">TO DO</option>
+                    <option value="IN_PROGRESS">IN PROGRESS</option>
+                    <option value="DONE">DONE</option>
+                    </select>
+                    </div>
 
-                        <input type="submit" className="btn btn-info btn-block mt-4"/>
+                    <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
-                </div>
+</div>
+            </div>
             </div>
         </div>
-    </div>
+    
         )
     }
  }

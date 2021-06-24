@@ -44,7 +44,6 @@ body {
 
 .project-buttons-set{
   width: 210px;
-  
 }
 
 .inner-card {
@@ -126,9 +125,19 @@ background-repeat:no-repeat;
 }
 
 .formBackground4{
-  background: url("./resources/original.jpg");
+  background: url("./resources/tree2.jpg");
+  padding-right: 10px;
+  margin-left: 190px;
   background-repeat:no-repeat;
+  width: 500px;
+  height: 755px;
+  /* background-color: black !important; */
 }
+
+.update-form{
+  margin-right: 190px;
+}
+
 
 .bg-userProfile1{
   background: url("./resources/girl-face.jpg");
