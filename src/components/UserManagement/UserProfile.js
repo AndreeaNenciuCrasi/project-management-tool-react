@@ -61,10 +61,10 @@ class UserProfile extends Component {
         const { errors } = this.state;
         return (
         <div className="container">
-            <div className="row">
+            <div className="row first-row-hight">
                 <div className="col-6 col-md-4 bg-userProfile1"></div>
                 <div className="col-6 col-md-4">
-                    <div className="bg-text-userProfile">
+                    <div className="bg-form-userProfile">
                     <form onSubmit={this.handleSubmit} className="login-input rounded">
                         <div className="form-group">    
                             <input type="text" 
@@ -127,18 +127,20 @@ class UserProfile extends Component {
             </div>
 
 
-            <div className="row">
-                <div className="col-6 col-md-4 bg-dark text-dark">.col-6 .col-md-4</div>
-                <div className="col-6 col-md-4"></div>
-                <div className="col-6 col-md-4 bg-dark text-dark">.col-6 .col-md-4</div>
+            <div className="row row-hight">
+                <div className="col-6 col-md-4 bg-dark text-dark"></div>
+                <div className="col-6 col-md-4 bg-dark text-dark"></div>
+                <div className="col-6 col-md-4 bg-dark text-dark"></div>
             </div>
 
 
-            <div className="row">
+            {/* <div className="row row-hight">
                 <div className="col-6 col-md-4"></div>
-                <div className="col-6 col-md-4 bg-dark text-dark">.col-6 .col-md-4</div>
+                <div className="col-6 col-md-4 "></div>
                 <div className="col-6 col-md-4"></div>
-            </div>
+            </div> */}
+            <br></br>
+            <br></br>
         </div>
         )
     }
