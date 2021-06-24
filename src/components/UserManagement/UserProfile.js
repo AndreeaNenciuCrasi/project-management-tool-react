@@ -15,6 +15,8 @@ class UserProfile extends Component {
             "notes": "",
             "errors":{}
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -44,43 +46,75 @@ class UserProfile extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        const updateCurrentUser = {
+            username: this.state.username,
+            fullName: this.state.fullName,
+            password: this.state.password,
+            notes: this.state.notes
+        }
+        this.props.updateCurrentUser(updateCurrentUser, this.props.history);
+    }
+
     render() {
-        // const {user} = this.props.security;
-        // console.log(user);
+        const { errors } = this.state;
         return (
         <div className="container">
             <div className="row">
                 <div className="col-6 col-md-4 bg-userProfile1"></div>
                 <div className="col-6 col-md-4">
                     <div className="bg-text-userProfile">
-                    <form 
-                    className=" login-input rounded">
+                    <form onSubmit={this.handleSubmit} className="login-input rounded">
                         <div className="form-group">    
                             <input type="text" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.fullName,
+                              })}
                             placeholder="Name" 
                             name="fullName"
                             value={this.state.fullName}
+                            onChange={this.handleChange}
                             />
+                            {errors.fullName && (
+                            <div className="invalid-feedback">{errors.fullName}</div>
+                            )}
                         </div>
                         <div className="form-group">
                             <input type="text" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.username,
+                              })} 
                             placeholder="Email Address" 
                             name="username"
                             value={this.state.username}
+                            onChange={this.handleChange}
                             />
+                            {errors.username && (
+                            <div className="invalid-feedback">{errors.username}</div>
+                            )}
                         </div>
                         <div className="form-group">
                             <textarea type="text" 
                             placeholder="notes" 
                             name="notes"
                             value={this.state.notes}
+                            onChange={this.handleChange}
                             />
                         </div>
                         <div className="form-group">
                             <input type="password" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.password,
+                              })} 
                             placeholder="Password" 
                             name="password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
                             />
+                            {errors.password && (
+                            <div className="invalid-feedback">{errors.password}</div>
+                            )}
                         </div>
                         
                         <input type="submit" className="btn btn-info btn-block mt-4"/>
