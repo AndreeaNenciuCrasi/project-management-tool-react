@@ -28,6 +28,9 @@ import ProjectTask from './ProjectTasks/ProjectTask'
 
         return (
             <div className="container">  
+            <button className="btn text-light bg-dark mb-2">
+                    <i className="fas fa-plus-circle pr-1"></i> Create New Status
+            </button>
                 <div className="row">
                     <div className="col-md-4 no-border">
                         <div className="card text-center mb-2 no-border">
