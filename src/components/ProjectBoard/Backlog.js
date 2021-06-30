@@ -1,12 +1,33 @@
 import React, { Component } from 'react'
+import NewStatusColumn from './ProjectTasks/NewStatusColumn';
 import ProjectTask from './ProjectTasks/ProjectTask'
 
  class Backlog extends Component {
+    constructor(props){
+        super(props);
+        this.state = { 
+            clickedButton:false
+        };
+  
+        this.handleClick = this.handleClick.bind(this);
+     }
+
+    handleClick() {
+        // e.preventDefault();
+        this.setState({clickedButton : true});
+        this.forceUpdate();
+        console.log("Page rerenderd");
+        
+      }
+
      render() {
          const { project_tasks_prop } = this.props;
          const tasks = project_tasks_prop.map(project_task => (
              <ProjectTask key={project_task.id} project_task={project_task} />
          ));
+         
+
+         var clickedButton = false;
 
          let todoItems = [];
          let inProgressItems = [];
@@ -25,10 +46,9 @@ import ProjectTask from './ProjectTasks/ProjectTask'
             }
          }
 
-
         return (
             <div className="container">  
-            <button className="btn text-light bg-dark mb-2">
+            <button onClick={this.handleClick} className="btn text-light bg-dark mb-2">
                     <i className="fas fa-plus-circle pr-1"></i> Create New Status
             </button>
                 <div className="row">
@@ -57,6 +77,10 @@ import ProjectTask from './ProjectTasks/ProjectTask'
                         </div>
                         {doneItems}   
                     </div>
+                    {this.state.clickedButton && <NewStatusColumn></NewStatusColumn>}
+                    
+                    
+                
                         </div>
                     </div>
         )
