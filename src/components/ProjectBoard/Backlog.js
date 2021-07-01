@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import NewStatusColumn from './ProjectTasks/NewStatusColumn';
 import ProjectTask from './ProjectTasks/ProjectTask'
-// import {getProject} from '../../actions/projectActions'
-// import { connect } from "react-redux";
-// import PropTypes from "prop-types";
+import axios from "axios";
 
  class Backlog extends Component {
     constructor(props){
         super(props);
         this.state = { 
             clickedButton:false,
-            newColumnName:""
+            column:"",
+            statusList:""
         };
-        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
      }
 
     handleClick() {
@@ -20,18 +20,51 @@ import ProjectTask from './ProjectTasks/ProjectTask'
         this.forceUpdate();
       }
 
-    //   componentDidMount() {
-    //       let firstTaskSequence= this.props[0].projectSequence;
-    //       const projectIdentifier = firstTaskSequence.substring(0, firstTaskSequence.indexOf('-'));
-    //     this.props.getProjects(projectIdentifier);
-    //   }
+    handleChange(e) {
+        this.setState({[e.target.name]: e.target.value})
+        const { project_tasks_prop } = this.props;
+        const tasks = project_tasks_prop.map(project_task => (
+                <ProjectTask key={project_task.id} project_task={project_task} />    
+            ));
+        const projectSequence = tasks[0].props.project_task.projectSequence;
+        const projectId = projectSequence.substring(0, projectSequence.indexOf('-'));
+        const newStatus = this.state.column;
+        axios.patch(`/api/project/newStatus/${projectId}/${newStatus}`, {typesOfStatus: "new"}).then(
+                (response)=>{
+                    console.log(response.data);
+      
+                }
+            )   
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+        const newColumn = {
+            "column": this.state.column}
+
+        
+
+    }
+
+    componentDidMount(){
+        const { project_tasks_prop } = this.props;
+         const tasks = project_tasks_prop.map(project_task => (
+             <ProjectTask key={project_task.id} project_task={project_task} />  
+         ));
+         const projectSequence = tasks[0].props.project_task.projectSequence;
+         const projectId = projectSequence.substring(0, projectSequence.indexOf('-'));
+      axios.get(`/api/project/statusList/${projectId}`).then(
+          (response)=>{
+              console.log(response.data);
+
+          }
+      )
+        }
 
      render() {
          const { project_tasks_prop } = this.props;
-        //  s = s.substring(0, s.indexOf('-'));
          const tasks = project_tasks_prop.map(project_task => (
              <ProjectTask key={project_task.id} project_task={project_task} />
-             
          ));
 
          let todoItems = [];
@@ -42,7 +75,7 @@ import ProjectTask from './ProjectTasks/ProjectTask'
             //  console.log(tasks[i]);
              if (tasks[i].props.project_task.status === "TO_DO") {
                  todoItems.push(tasks[i]);
-                 console.log(this.props);
+                //  console.log(tasks[i].props.project_task.projectSequence);
              }
              if (tasks[i].props.project_task.status === "IN_PROGRESS") {
                 inProgressItems.push(tasks[i]);
@@ -54,11 +87,15 @@ import ProjectTask from './ProjectTasks/ProjectTask'
 
         return (
             < div className="container">  
-                <form class="form-inline">
+                <form class="form-inline" onSubmit={this.handleSubmit}>
                 <div class="form-group mx-sm-3 mb-2">
-                    <input type="text" class="form-control-plaintext bg-white rounded"/>
+                    <input type="text" class="form-control-plaintext bg-white rounded"
+                        value={this.state.value}
+                        onChange={this.handleChange}/>
                 </div>
-                <button type="submit" onClick={this.handleClick} className="btn text-light bg-dark mb-2">
+                <button type="submit" 
+                        // onClick={this.handleClick} 
+                        className="btn text-light bg-dark mb-2">
                     <i className="fas fa-plus-circle pr-1"></i> Create New Status
                 </button>
                 </form>
@@ -96,15 +133,5 @@ import ProjectTask from './ProjectTasks/ProjectTask'
         )
     }
 }
-
-// Backlog.propTypes = {
-//     project: PropTypes.object.isRequired,
-//   };
-  
-//   const mapStateToProps = (state) => ({
-//     project: state.project,
-//   });
-
-// export default connect(mapStateToProps, { getProject }) (Backlog);
 
 export default Backlog;
