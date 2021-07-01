@@ -34,7 +34,12 @@ class ProjectItem extends Component {
 
             <div className="col-md-4 d-none d-lg-block px-md-5">
               <ul className="list-group project-buttons-set">
-                <Link to={`/projectBoard/${project.projectIdentifier}`}>
+                <Link
+                  to={{
+                        pathname: `/projectBoard/${project.projectIdentifier}`,
+                        state: {projectIdentifier: project.projectIdentifier }
+                      }}
+>
                   <li className="list-group-item text-dark bg-transparent border border-dark rounded">
                     <i class="fa fa-flag-checkered pr-1"> </i> Project Board
                   </li>
