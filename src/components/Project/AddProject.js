@@ -10,7 +10,7 @@ class AddProject extends Component {
 
     this.state = {
       projectName: "",
-      projectIdentifier: "",
+      projectIdentifier: `${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`,
       description: "",
       start_date: "",
       end_date: "",
@@ -77,6 +77,7 @@ class AddProject extends Component {
                     name="projectIdentifier"
                     value={this.state.projectIdentifier}
                     onChange={this.handleChange}
+                    disabled
                   />
                   {errors.projectIdentifier && (
                     <div className="invalid-feedback">
