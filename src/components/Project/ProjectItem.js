@@ -3,8 +3,29 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteProject } from "../../actions/projectActions";
+import axios from "axios";
 
 class ProjectItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {    this.setState({value: event.target.value});  }
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log('A name was submitted: ' + this.state.value + ` ${this.props.project.projectIdentifier}`);
+    const newTeammate ={};
+    axios.post(`/api/project/team/${this.props.project.projectIdentifier}/${this.state.value}`, newTeammate).then(
+      (response)=>{
+          console.log(response.data);
+
+      }
+  )   
+    
+  }
   onDeleteClick = (id) => {
     this.props.deleteProject(id);
   };
@@ -29,6 +50,12 @@ class ProjectItem extends Component {
               {project.end_date &&
               <p>End date: <span className="text-danger font-weight-bold">{project.end_date}</span></p>
               }
+              <form onSubmit={this.handleSubmit}>
+              <label>
+              Add TeamMate:
+                  <input type="text" value={this.state.value} onChange={this.handleChange} />        </label>
+                  <input type="submit" value="Submit" />
+              </form>
               
             </div>
 
