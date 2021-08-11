@@ -8,29 +8,46 @@ import axios from "axios";
 class ProjectItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {teammates: [], value: ''};
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick= this.handleClick.bind(this)
   }
 
+  handleClick() { 
+    this.setState({showResult: true});
+    axios.get(`/api/project/team/${this.props.project.projectIdentifier}`).then(
+      (response)=>{
+        this.setState({
+          teammates: response.data
+        }); 
+      }
+      
+  )  
+  console.log(this.state.teammates); 
+   }
   handleChange(event) {    this.setState({value: event.target.value});  }
   handleSubmit(event) {
     event.preventDefault();
-    console.log('A name was submitted: ' + this.state.value + ` ${this.props.project.projectIdentifier}`);
     const newTeammate ={};
     axios.post(`/api/project/team/${this.props.project.projectIdentifier}/${this.state.value}`, newTeammate).then(
       (response)=>{
           console.log(response.data);
-
       }
   )   
-    
+  this.setState({value:''});
   }
+
+
   onDeleteClick = (id) => {
     this.props.deleteProject(id);
   };
+
+  
   render() {
     const { project } = this.props;
+    const {teammates} =this.state;
     return (
       
       <div className="container">
@@ -51,11 +68,12 @@ class ProjectItem extends Component {
               <p>End date: <span className="text-danger font-weight-bold">{project.end_date}</span></p>
               }
               <form onSubmit={this.handleSubmit}>
-              <label>
-              Add TeamMate:
-                  <input type="text" value={this.state.value} onChange={this.handleChange} />        </label>
-                  <input type="submit" value="Submit" />
+                <label>
+                Add TeamMate:
+                    <input type="text" value={this.state.value} onChange={this.handleChange} />        </label>
+                    <input type="submit" value="Submit" />
               </form>
+              
               
             </div>
 
@@ -63,12 +81,12 @@ class ProjectItem extends Component {
               <ul className="list-group project-buttons-set">
                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
                   <li className="list-group-item text-dark bg-transparent border border-dark rounded">
-                    <i class="fa fa-flag-checkered pr-1"> </i> Project Board
+                    <i className="fa fa-flag-checkered pr-1"> </i> Project Board
                   </li>
                 </Link>
                 <Link to={`/updateProject/${project.projectIdentifier}`}>
                   <li className="list-group-item bg-transparent border border-dark rounded">
-                    <i class="fa fa-edit pr-1"> </i> Update Project Info
+                    <i className="fa fa-edit pr-1"> </i> Update Project Info
                   </li>
                 </Link>
 
@@ -79,7 +97,23 @@ class ProjectItem extends Component {
                     project.projectIdentifier
                   )}
                 >
-                  <i class="fa fa-minus-circle pr-1"> </i> Delete Project
+                  <i className="fa fa-minus-circle pr-1"> </i> Delete Project
+                </li>
+
+                <li className="list-group-item text-dark bg-transparent border border-dark rounded">
+                <div className="dropdown">
+                  <button onClick={this.handleClick} 
+                    className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Teammates
+                  </button>
+                  {teammates && 
+                      (teammates.map(item => (
+                    <div className="dropdown-menu" key={item.id} aria-labelledby="dropdownMenuButton">
+                        <a className="dropdown-item"  href="#">{item.username}</a>
+                    </div>
+                    )))
+                  }
+                </div>
                 </li>
               </ul>
             </div>
