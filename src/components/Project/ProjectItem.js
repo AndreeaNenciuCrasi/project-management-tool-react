@@ -12,7 +12,8 @@ class ProjectItem extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClick= this.handleClick.bind(this)
+    this.handleClick= this.handleClick.bind(this);
+    this.handleDeleteTeammate = this.handleDeleteTeammate.bind(this);
   }
 
   handleClick(event) { 
@@ -24,6 +25,15 @@ class ProjectItem extends Component {
         }); 
         event.target.nextElementSibling.classList.toggle('show');
       } 
+  )  
+   }
+
+   handleDeleteTeammate(event, id){
+     console.log(id);
+    axios.delete(`/api/project/team/${id}`).then(
+      (response)=>{
+          console.log('item deleted' + id);
+      }
   )  
    }
 
@@ -109,8 +119,9 @@ class ProjectItem extends Component {
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   {this.state.teammates && 
-                      (this.state.teammates.map(item =>(  
-                        <a className="dropdown-item"  key={item.id} href="#">{item.username}</a>
+                      (this.state.teammates.map(item =>( 
+                      
+                        <a className="dropdown-item"  key={item.id} href="#">{item.username} <button onClick={(e)=>{this.handleDeleteTeammate(e, item.id)}} className="btn text-light bg-info btn-sml">x</button></a>
                       )))
                   }
                   </div>
