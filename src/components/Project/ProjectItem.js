@@ -15,19 +15,20 @@ class ProjectItem extends Component {
     this.handleClick= this.handleClick.bind(this)
   }
 
-  handleClick() { 
-    this.setState({showResult: true});
+  handleClick(event) { 
     axios.get(`/api/project/team/${this.props.project.projectIdentifier}`).then(
       (response)=>{
+        console.log(response.data);
         this.setState({
           teammates: response.data
         }); 
-      }
-      
+        event.target.nextElementSibling.classList.toggle('show');
+      } 
   )  
-  console.log(this.state.teammates); 
    }
+
   handleChange(event) {    this.setState({value: event.target.value});  }
+
   handleSubmit(event) {
     event.preventDefault();
     const newTeammate ={};
@@ -47,9 +48,9 @@ class ProjectItem extends Component {
   
   render() {
     const { project } = this.props;
-    const {teammates} =this.state;
+    // const {teammates} =this.state;
+
     return (
-      
       <div className="container">
         <div className="container bg-info text-info rounded-top project-teal-line">Project</div>
         <div className="card card-body mb-3 opacity floating-card-project no-border">
@@ -106,13 +107,13 @@ class ProjectItem extends Component {
                     className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Teammates
                   </button>
-                  {teammates && 
-                      (teammates.map(item => (
-                    <div className="dropdown-menu" key={item.id} aria-labelledby="dropdownMenuButton">
-                        <a className="dropdown-item"  href="#">{item.username}</a>
-                    </div>
-                    )))
+                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  {this.state.teammates && 
+                      (this.state.teammates.map(item =>(  
+                        <a className="dropdown-item"  key={item.id} href="#">{item.username}</a>
+                      )))
                   }
+                  </div>
                 </div>
                 </li>
               </ul>
