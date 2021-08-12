@@ -19,6 +19,7 @@ import {SET_CURRENT_USER} from "./actions/types";
 import {logout} from "./actions/securityActions";
 import SecureRoute from "./securityUtils/SecureRoute";
 import UserProfile from "./components/UserManagement/UserProfile";
+import TeammateProjectItem from "./components/Project/TeammateProjectItem";
 
 const jwtToken =localStorage.jwtToken;
 
@@ -53,6 +54,7 @@ function App() {
           {/* Private Routes: */}
           <Switch>
           <SecureRoute exact path="/dashboard" component={Dashboard} />
+          <SecureRoute exact path="/collaboration" component={TeammateProjectItem} />
           <SecureRoute exact path="/userProfile" component={UserProfile} />
           <SecureRoute exact path="/addProject" component={AddProject} />
           <SecureRoute exact path="/updateProject/:id" component={UpdateProject}/>

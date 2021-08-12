@@ -4,6 +4,7 @@ import CreateProjectButton from "./Project/CreateProjectButton";
 import { connect } from "react-redux";
 import { getProjects } from "../actions/projectActions";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -19,6 +20,10 @@ class Dashboard extends Component {
             <div className="col-md-12">
               <h1 className="display-4 text-center">Projects</h1>
               <CreateProjectButton />
+
+              <Link to="/collaboration" className="btn text-light bg-dark">
+                  Collaboration
+              </Link>
               <hr></hr>
 
               {projects.map((project) => (
