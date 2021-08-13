@@ -49,9 +49,9 @@ class TeammateProjectItem extends Component {
                   <h3>{project.projectName}</h3>
                   <p>Project Owner: {project.projectLeader}</p>
                   
-                      <button onClick={this.handleClick(project.projectIdentifier)} >
+                      {/* <button onClick={this.handleClick(project.projectIdentifier)} >
                         Teammates
-                      </button>
+                      </button> */}
     
                   {this.state.teammates && 
                           (this.state.teammates.map(item =>( 
