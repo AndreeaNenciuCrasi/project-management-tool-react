@@ -5,7 +5,8 @@ import axios from "axios";
 class TeammateProjectItem extends Component {
     constructor(props) {
         super(props);
-        this.state = {projects: []};
+        this.state = {projects: [], teammates: []};
+        this.handleClick= this.handleClick.bind(this);
     }
 
     componentWillMount() {
@@ -18,6 +19,17 @@ class TeammateProjectItem extends Component {
             } 
         )  
     }
+    handleClick(projectIdentifier) { 
+      axios.get(`/api/project/team/${projectIdentifier}`).then(
+        (response)=>{
+          console.log(response.data);
+          this.setState({
+            teammates: response.data
+          }); 
+          
+        } 
+    )  
+     }
 
     render(){
         const {projects} = this.state;
@@ -35,7 +47,19 @@ class TeammateProjectItem extends Component {
                 </div>
                 <div className="col-lg-6 col-md-4 col-8">
                   <h3>{project.projectName}</h3>
-                  <p>{project.description}</p>
+                  <p>Project Owner: {project.projectLeader}</p>
+                  
+                      <button onClick={this.handleClick(project.projectIdentifier)} >
+                        Teammates
+                      </button>
+    
+                  {this.state.teammates && 
+                          (this.state.teammates.map(item =>( 
+                            <p  key={item.id} href="#">{item.username}</p>
+                          )))
+                      }
+                    
+                  <p>Description: {project.description}</p>
     
                   {project.start_date &&
                   <p>Start date: {project.start_date}</p>}
@@ -88,7 +112,9 @@ class TeammateProjectItem extends Component {
                   </ul>
                 </div>
                 </div>
+                
                 )))}
+                
             </div>
           </div>
         )

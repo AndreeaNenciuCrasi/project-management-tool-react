@@ -28,11 +28,11 @@ class ProjectItem extends Component {
   )  
    }
 
-   handleDeleteTeammate(event, id){
-     console.log(id);
-    axios.delete(`/api/project/team/${id}`).then(
+   handleDeleteTeammate(event, userId, projectId){
+     console.log(userId);
+    axios.delete(`/api/project/team/${userId}/${projectId}`).then(
       (response)=>{
-          console.log('item deleted' + id);
+          console.log('item deleted' + userId);
       }
   )  
    }
@@ -121,7 +121,7 @@ class ProjectItem extends Component {
                   {this.state.teammates && 
                       (this.state.teammates.map(item =>( 
                       
-                        <a className="dropdown-item"  key={item.id} href="#">{item.username} <button onClick={(e)=>{this.handleDeleteTeammate(e, item.id)}} className="btn text-light bg-info btn-sml">x</button></a>
+                        <a className="dropdown-item"  key={item.id} href="#">{item.username} <button onClick={(e)=>{this.handleDeleteTeammate(e, item.id, project.id)}} className="btn text-light bg-info btn-sml">x</button></a>
                       )))
                   }
                   </div>
