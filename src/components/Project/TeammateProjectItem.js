@@ -48,11 +48,6 @@ class TeammateProjectItem extends Component {
                 <div className="col-lg-6 col-md-4 col-8">
                   <h3>{project.projectName}</h3>
                   <p>Project Owner: {project.projectLeader}</p>
-                  
-                      {/* <button onClick={this.handleClick(project.projectIdentifier)} >
-                        Teammates
-                      </button> */}
-    
                   {this.state.teammates && 
                           (this.state.teammates.map(item =>( 
                             <p  key={item.id} href="#">{item.username}</p>
@@ -77,38 +72,7 @@ class TeammateProjectItem extends Component {
                         <i className="fa fa-flag-checkered pr-1"> </i> Project Board
                       </li>
                     </Link>
-                    <Link to={`/updateProject/${project.projectIdentifier}`}>
-                      <li className="list-group-item bg-transparent border border-dark rounded">
-                        <i className="fa fa-edit pr-1"> </i> Update Project Info
-                      </li>
-                    </Link>
-    
-                    {/* <li
-                      className="list-group-item text-dark bg-transparent border border-dark rounded"
-                      onClick={this.onDeleteClick.bind(
-                        this,
-                        project.projectIdentifier
-                      )}
-                    >
-                      <i className="fa fa-minus-circle pr-1"> </i> Delete Project
-                    </li>
-    
-                    <li className="list-group-item text-dark bg-transparent border border-dark rounded">
-                    <div className="dropdown">
-                      <button onClick={this.handleClick} 
-                        className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Teammates
-                      </button>
-                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      {this.state.teammates && 
-                          (this.state.teammates.map(item =>( 
-                          
-                            <a className="dropdown-item"  key={item.id} href="#">{item.username} <button onClick={(e)=>{this.handleDeleteTeammate(e, item.id)}} className="btn text-light bg-info btn-sml">x</button></a>
-                          )))
-                      }
-                      </div>
-                    </div>
-                    </li> */}
+                    
                   </ul>
                 </div>
                 </div>
