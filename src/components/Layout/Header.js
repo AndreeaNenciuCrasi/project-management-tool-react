@@ -62,6 +62,8 @@ class Header extends Component {
     }
 
     return (
+      <div>
+        <div className="topNavbarImage"></div>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
@@ -79,6 +81,7 @@ class Header extends Component {
           
         </div>
       </nav>
+      </div>
     );
   }
 }

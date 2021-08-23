@@ -1,5 +1,11 @@
 body {
-  background: url("./resources/3b5e7c0b23f541907e4cbeee03c53539.mmexport1503749895409-01-01-01.jpeg");
+  /* background: url("./resources/3b5e7c0b23f541907e4cbeee03c53539.mmexport1503749895409-01-01-01.jpeg"); */
+  /* background: url("./resources/6iaPYl.jpg"); */
+}
+
+.topNavbarImage {
+  background: url("./resources/Project-Management-Canvas_1920x548.jpg");
+  height: 540px;
 }
 
 .fa.fa-edit {
@@ -90,20 +96,22 @@ body {
 }
 
 .register-container{
-  background: url("./resources/550x379.jpg");
+  background: url("./resources/business-meeting-1-1.png");
+  
+  padding-top: 500px;
   background-repeat:no-repeat;
 }
 
 .login-container{
-  background: url("./resources/do-not-remove-this-tag-wallpaper-preview.jpg");
+  background: url("./resources/Project-Management-360_temp.png");
+  padding-top: 500px;
   background-repeat:no-repeat;
 }
 
 .landing-container{
-  background: url("./resources/4431896656_56d2908af7_b-1024x698.jpg.optimal.jpg");
-  /* background-repeat:no-repeat;
-  margin-left: 50px;*/
-  height: 900px; 
+  background: url("./resources/architect-architecture-black-and-white-1537008.jpg");
+  margin-top: 500px;
+  height: 760px; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
