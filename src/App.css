@@ -102,6 +102,13 @@ body {
   margin-bottom: 70px;
 }
 
+.login-text{
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 300px;
+  font-size: 15px;
+}
+
 .add-task-form-margin{
   margin-left: 400px;
 }
