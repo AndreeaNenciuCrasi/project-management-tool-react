@@ -46,10 +46,14 @@ class Login extends Component {
         const {errors} = this.state;
         return (
             <div className="login">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-8 m-auto login-container">
-                    <h1 className="display-4 text-center text-dark">Log In</h1>
+            <div>
+            <div className="login-container">
+                <div className="row">
+                    <div className="col-md-6">
+            
+                    <h1 className="display-4 text-center form-titles">Log In</h1>
+                    </div>
+                    <div className="col-md-6">
                     <form onSubmit={this.handleSubmit} 
                     className="login-input login-form-margin shadow-lg p-3 mb-5 bg-white rounded">
                         <div className="form-group">
@@ -80,6 +84,7 @@ class Login extends Component {
                         </div>
                         <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>

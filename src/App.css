@@ -4,8 +4,10 @@ body {
 }
 
 .topNavbarImage {
-  background: url("./resources/Project-Management-Canvas_1920x548.jpg");
-  height: 540px;
+  background: url("./resources/LandingPage.png");
+  height: 702px;
+  background-size: cover;
+  /* width: 2000px; */
 }
 
 .fa.fa-edit {
@@ -81,8 +83,9 @@ body {
 }
 
 .login-form-margin{
-  margin-left: 400px;
-  margin-top: 300px;
+  width: 80%;
+  opacity: 0.95;
+  margin-bottom: 70px;
 }
 
 .add-task-form-margin{
@@ -112,7 +115,7 @@ body {
 
 .register-container{
   background: url("./resources/business-meeting-1-1.png");
-  height: 540px;
+  height: 690px;
   padding-top: 40px;
   background-repeat:no-repeat;
   background-size: cover;
@@ -120,8 +123,10 @@ body {
 
 .login-container{
   background: url("./resources/Project-Management-360_temp.png");
-  padding-top: 500px;
+  height: 690px;
+  padding-top: 40px;
   background-repeat:no-repeat;
+  background-size: cover;
 }
 
 .landing-container{
