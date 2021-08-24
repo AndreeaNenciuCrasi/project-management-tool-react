@@ -7,7 +7,21 @@ body {
   background: url("./resources/LandingPage.png");
   height: 702px;
   background-size: cover;
-  /* width: 2000px; */
+}
+
+.padding-top{
+  padding-top: 90px;
+}
+.align-h1{
+  margin-left: 500px;
+  font-size: 70px;
+}
+
+
+.align-p{
+  margin-top: 260px;
+  margin-left: 100px;
+  font-size: 30px;
 }
 
 .fa.fa-edit {
@@ -114,7 +128,7 @@ body {
 }
 
 .register-container{
-  background: url("./resources/business-meeting-1-1.png");
+  background: url("./resources/registerPage.jpg");
   height: 690px;
   padding-top: 40px;
   background-repeat:no-repeat;
@@ -122,21 +136,21 @@ body {
 }
 
 .login-container{
-  background: url("./resources/Project-Management-360_temp.png");
+  background: url("./resources/LoginPage.png");
   height: 690px;
   padding-top: 40px;
   background-repeat:no-repeat;
   background-size: cover;
 }
 
-.landing-container{
-  background: url("./resources/architect-architecture-black-and-white-1537008.jpg");
+/* .landing-container{
+  background: url("./resources/LandingPage.png");
   margin-top: 500px;
   height: 760px; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .formBackground1{
 background: url("./resources/images\ \(1\).jpeg");
