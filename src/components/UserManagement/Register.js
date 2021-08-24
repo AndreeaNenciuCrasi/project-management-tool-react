@@ -48,11 +48,14 @@ class Register extends Component {
         const {errors} = this.state;
         return (
     <div className="register ">
-        <div className="container ">
-            <div className="row">
-                <div className="col-md-8 m-auto register-container">
-                    <h1 className="display-4 text-center text-dark">Sign Up</h1>
-                    <p className="lead text-center text-dark">Create your Account</p>
+        <div>
+            <div className="register-container">
+                <div className="row">
+                    <div className="col-md-6">
+                    <h1 className="display-4 text-center form-titles">Sign Up</h1>
+                    <p className="lead text-center form-titles">Create your Account</p>
+                    </div>
+                    <div className="col-md-6">
                     <form onSubmit={this.handleSubmit} 
                     className=" login-input register-form-margin shadow-lg p-3 mb-5 bg-white rounded">
                         <div className="form-group">    
@@ -109,7 +112,11 @@ class Register extends Component {
                         </div>
                         <input type="submit" className="btn btn-info btn-block mt-4"/>
                     </form>
+                    </div>
                 </div>
+            
+            
+
             </div>
         </div>
     </div>

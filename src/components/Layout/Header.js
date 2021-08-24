@@ -16,7 +16,7 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
+          <Link className="nav-link navbar-text-color" to="/dashboard">
             Dashboard
           </Link>
         </li>
@@ -29,7 +29,7 @@ class Header extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/logout" onClick={this.logout.bind(this)}>
+          <Link className="nav-link navbar-text-color" to="/logout" onClick={this.logout.bind(this)}>
             Logout
           </Link>
         </li>
@@ -41,12 +41,12 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link " to="/register">
+          <Link className="nav-link navbar-text-color" to="/register">
             Sign Up
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login">
+          <Link className="nav-link navbar-text-color" to="/login">
             Login
           </Link>
         </li>
@@ -63,8 +63,8 @@ class Header extends Component {
 
     return (
       <div>
-        <div className="topNavbarImage"></div>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+        
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-with-line">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Team Project Management Tool
@@ -81,6 +81,7 @@ class Header extends Component {
           
         </div>
       </nav>
+      
       </div>
     );
   }

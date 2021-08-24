@@ -31,6 +31,10 @@ body {
   margin-bottom: 0.5%;
 }
 
+.navbar-with-line{
+  margin: 0 0 1px 0 !important;
+}
+
 .floating-card-task{
   background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
   -webkit-box-shadow: 20px 20px 10px 0px grey;
@@ -61,8 +65,19 @@ body {
 }
 
 .register-form-margin{
-  margin-left: 500px;
+  /* margin-left: 500px; */
+  width: 80%;
+  opacity: 0.95;
   margin-bottom: 70px;
+}
+
+.form-titles{
+  color: #f31126!important;
+  text-shadow: 2px 4px 3px #2b44438c;
+}
+
+.navbar-text-color{
+  color: #f31126!important;
 }
 
 .login-form-margin{
@@ -97,9 +112,10 @@ body {
 
 .register-container{
   background: url("./resources/business-meeting-1-1.png");
-  
-  padding-top: 500px;
+  height: 540px;
+  padding-top: 40px;
   background-repeat:no-repeat;
+  background-size: cover;
 }
 
 .login-container{

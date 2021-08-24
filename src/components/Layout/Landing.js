@@ -14,6 +14,7 @@ class Landing extends Component {
     render() {
         return (
             <div>
+                <div className="topNavbarImage"></div>
                 <div className=" landing-container">
                 <Link to="/register" className="btn btn-lg btn-info mr-2">
                             Sign Up
