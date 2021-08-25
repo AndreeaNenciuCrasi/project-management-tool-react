@@ -34,53 +34,47 @@ class TeammateProjectItem extends Component {
     render(){
         const {projects} = this.state;
         return(
-            <div className="container">
-            <div className="container bg-info text-info rounded-top project-teal-line">Project</div>
-            <div className="card card-body mb-3 opacity floating-card-project no-border">
-
-            {projects && (
+        <div className="container">
+        <h1 className="display-4 text-center mt-5 mb-5">Collaboration</h1>
+        <hr></hr>
+        {projects && (
                 projects.map(project=>(
-
-              <div className="row">
-                <div className="col-2">
-                  <span className="mx-auto font-weight-bold">{project.projectIdentifier}</span>
-                </div>
-                <div className="col-lg-6 col-md-4 col-8">
-                  <h3>{project.projectName}</h3>
-                  <p>Project Owner: {project.projectLeader}</p>
-                  {this.state.teammates && 
-                          (this.state.teammates.map(item =>( 
-                            <p  key={item.id} href="#">{item.username}</p>
-                          )))
-                      }
-                    
-                  <p>Description: {project.description}</p>
-    
-                  {project.start_date &&
-                  <p>Start date: {project.start_date}</p>}
-                  
-                  {project.end_date &&
-                  <p>End date: <span className="text-danger font-weight-bold">{project.end_date}</span></p>
-                  }
-                  
-                </div>
-    
-                <div className="col-md-4 d-none d-lg-block px-md-5">
-                  <ul className="list-group project-buttons-set">
-                    <Link to={`/projectBoard/${project.projectIdentifier}`}>
-                      <li className="list-group-item text-dark bg-transparent border border-dark rounded">
-                        <i className="fa fa-flag-checkered pr-1"> </i> Project Board
-                      </li>
-                    </Link>
-                    
-                  </ul>
-                </div>
-                </div>
+          <div className="card">
+          <div id="triangle"></div>
+          <h2>{project.projectName}</h2>
+          <div className="row">
+          <div className="col-6">
+            <div className="project-description">
+            <p><b>Project Owner: </b>{project.projectLeader}</p>
+            <p><b>Description: </b>{project.description}</p>
+          {project.start_date &&
+              <p><b>Start date: </b>{project.start_date}</p>}
+              
+              {project.end_date &&
+              <p><b>End date: </b><span className="text-danger font-weight-bold">{project.end_date}</span></p>
+              }
+              </div>
+          </div>
+          
+          <div class="col-6">
+          <div className="d-lg-block margin-card-buttons">
+              <ul className="list-group project-buttons-set">
                 
-                )))}
-                
+                <Link to={`/projectBoard/${project.projectIdentifier}`}>
+                  <li className="list-group-item text-dark bg-transparent no-border">
+                  <button className="btn text-light bg-dark">
+                    <i className="fa fa-flag-checkered pr-1 card-buttons"> </i> Project Board</button>
+                  </li>
+                </Link>
+              </ul>
             </div>
           </div>
+          </div>
+          
+              
+        </div>
+        )))}
+      </div>
         )
     }
 }
