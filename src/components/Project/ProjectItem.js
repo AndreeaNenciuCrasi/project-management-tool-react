@@ -62,17 +62,11 @@ class ProjectItem extends Component {
 
     return (
       <div className="container">
-        <div className="container bg-info text-info rounded-top project-teal-line">Project</div>
-        <div className="card card-body mb-3 opacity floating-card-project no-border">
-          <div className="row">
-            <div className="col-2">
-              <span className="mx-auto font-weight-bold">{project.projectIdentifier}</span>
-            </div>
-            <div className="col-lg-6 col-md-4 col-8">
-              <h3>{project.projectName}</h3>
-              <p>{project.description}</p>
-
-              {project.start_date &&
+        <div class="card">
+          <div id="triangle"></div>
+          <h2>{project.projectName}</h2>
+          <p>{project.description}</p>
+          {project.start_date &&
               <p>Start date: {project.start_date}</p>}
               
               {project.end_date &&
@@ -84,37 +78,37 @@ class ProjectItem extends Component {
                     <input type="text" value={this.state.value} onChange={this.handleChange} />        </label>
                     <input type="submit" value="Submit" />
               </form>
-              
-              
-            </div>
-
-            <div className="col-md-4 d-none d-lg-block px-md-5">
+              <div className="col-md-4 d-none d-lg-block px-md-5 margin-card-buttons">
               <ul className="list-group project-buttons-set">
+                
                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
-                  <li className="list-group-item text-dark bg-transparent border border-dark rounded">
-                    <i className="fa fa-flag-checkered pr-1"> </i> Project Board
+                  <li className="list-group-item text-dark bg-transparent no-border">
+                  <button className="btn text-light bg-dark"><i className="fa fa-flag-checkered pr-1 card-buttons"> </i> Project Board</button>
                   </li>
                 </Link>
+                
+                
                 <Link to={`/updateProject/${project.projectIdentifier}`}>
-                  <li className="list-group-item bg-transparent border border-dark rounded">
-                    <i className="fa fa-edit pr-1"> </i> Update Project Info
+                  <li className="list-group-item bg-transparent no-border">
+                  <button className="btn text-light bg-dark"><i className="fa fa-edit pr-1 card-buttons"> </i> Update Project</button>
                   </li>
                 </Link>
+                
 
                 <li
-                  className="list-group-item text-dark bg-transparent border border-dark rounded"
+                  className="list-group-item text-dark bg-transparent no-border"
                   onClick={this.onDeleteClick.bind(
                     this,
                     project.projectIdentifier
                   )}
                 >
-                  <i className="fa fa-minus-circle pr-1"> </i> Delete Project
+                  <button className="btn text-light bg-dark"><i className="fa fa-minus-circle pr-1"> </i> Delete Project</button>
                 </li>
 
-                <li className="list-group-item text-dark bg-transparent border border-dark rounded">
+                <li className="list-group-item text-dark bg-transparent no-border ">
                 <div className="dropdown">
                   <button onClick={this.handleClick} 
-                    className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    className="btn text-light bg-dark dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Teammates
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -129,8 +123,8 @@ class ProjectItem extends Component {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
+        
       </div>
     );
   }

@@ -21,7 +21,7 @@ class Dashboard extends Component {
               <h1 className="display-4 text-center">Projects</h1>
               <CreateProjectButton />
 
-              <Link to="/collaboration" className="btn text-light bg-dark">
+              <Link to="/collaboration" className="btn text-light bg-dark ml-3">
                   Collaboration
               </Link>
               <hr></hr>
