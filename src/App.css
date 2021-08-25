@@ -244,7 +244,7 @@ html, body {
 }
 
 body {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -255,7 +255,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 400px;
+  height: 350px;
   width: 900px;
   border-radius: 25px;
   background-color: #ffffff;
@@ -294,7 +294,7 @@ h2 {
   mix-blend-mode: difference;
 }
 
-p {
+/* p {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -302,7 +302,7 @@ p {
   font-size: 18px;
   color: #ffffff;
   mix-blend-mode: difference;
-}
+} */
 
 #circle {
   height: 100%;
@@ -323,7 +323,7 @@ p {
   margin-left: 200px;
 }
 
-.content a {
+/* .content a {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -335,11 +335,17 @@ p {
   padding: 5px 10px 5px 10px;
   border-radius: 30px;
   box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .card-buttons{
   width: 20px;
 }
 .margin-card-buttons{
-  margin-left: 500px;
+  margin-top: 100px;
+  margin-left: 150px;
 }
+
+.project-description{
+  margin-top: 100px;
+}
+
