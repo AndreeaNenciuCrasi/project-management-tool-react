@@ -1,7 +1,4 @@
-body {
-  /* background: url("./resources/3b5e7c0b23f541907e4cbeee03c53539.mmexport1503749895409-01-01-01.jpeg"); */
-  /* background: url("./resources/6iaPYl.jpg"); */
-}
+
 
 .topNavbarImage {
   background: url("./resources/LandingPage.png");
@@ -51,7 +48,7 @@ body {
   margin: 0 0 1px 0 !important;
 }
 
-/* .floating-card-task{
+.floating-card-task{
   background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
   -webkit-box-shadow: 20px 20px 10px 0px grey;
   -moz-box-shadow: 20px 20px 10px 0px grey;
@@ -60,13 +57,6 @@ body {
   margin-top: 5%;
 }
 
-.floating-card-project {
-  background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
-  -webkit-box-shadow: 20px 20px 10px 0px grey;
-  -moz-box-shadow: 20px 20px 10px 0px grey;
-  box-shadow: 20px 20px 10px 0px grey;
-  margin-bottom: 10%;
-} */
 
 .project-buttons-set{
   width: 210px;
@@ -150,15 +140,6 @@ body {
   background-size: cover;
 }
 
-/* .landing-container{
-  background: url("./resources/LandingPage.png");
-  margin-top: 500px;
-  height: 760px; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 .formBackground1{
 background: url("./resources/images\ \(1\).jpeg");
 background-repeat:no-repeat;
@@ -229,18 +210,6 @@ background-repeat:no-repeat;
 .form-control::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgb(59, 55, 55);
-}
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
-html, body {
-  /* height: 100vh; */
-  /* background-color: #666666; */
-  /* font-family: 'Open Sans', sans-serif; */
 }
 
 body {
@@ -322,20 +291,6 @@ h2 {
   margin-top: -430px;
   margin-left: 200px;
 }
-
-/* .content a {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 0 20px 20px 0;
-  cursor: pointer;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 28px;
-  padding: 5px 10px 5px 10px;
-  border-radius: 30px;
-  box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
-} */
 
 .card-buttons{
   width: 20px;
