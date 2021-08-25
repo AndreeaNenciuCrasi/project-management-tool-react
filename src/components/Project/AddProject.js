@@ -45,17 +45,16 @@ class AddProject extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="project">
-        <div className="container formBackground1">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h5 className="display-4 text-center">Create Project form</h5>
-              <hr></hr>
-              <form onSubmit={this.handleSubmit} className="project-forms-margin">
-                <div className="form-group">
-                  <input
+      <div>
+        <div className="image-wrapper">
+          <div className="content">
+	          
+            <form onSubmit={this.handleSubmit} className="project-forms-margin form-project">
+            <div className="user existing">
+	          		    <p className="sign">Create Project</p>
+                    <input
                     type="text"
-                    className={classnames("form-control form-control-lg inner-card", {
+                    className={classnames("form-control form-control-lg inner-card form-input", {
                       "is-invalid": errors.projectName,
                     })}
                     placeholder="Project Name"
@@ -66,11 +65,10 @@ class AddProject extends Component {
                   {errors.projectName && (
                     <div className="invalid-feedback">{errors.projectName}</div>
                   )}
-                </div>
-                <div className="form-group">
-                  <input
+
+<input
                     type="text"
-                    className={classnames("form-control form-control-lg inner-card", {
+                    className={classnames("form-control form-control-lg inner-card form-input", {
                       "is-invalid": errors.projectIdentifier,
                     })}
                     placeholder="Unique Project ID"
@@ -84,11 +82,10 @@ class AddProject extends Component {
                       {errors.projectIdentifier}
                     </div>
                   )}
-                </div>
-
-                <div className="form-group">
+		          		
+		  
                   <textarea
-                    className={classnames("form-control form-control-lg inner-card", {
+                    className={classnames("form-control form-control-lg inner-card form-input", {
                       "is-invalid": errors.description,
                     })}
                     placeholder="Project Description"
@@ -99,36 +96,52 @@ class AddProject extends Component {
                   {errors.description && (
                     <div className="invalid-feedback">{errors.description}</div>
                   )}
-                </div>
-                <h6>Start Date</h6>
-                <div className="form-group">
-                  <input
+	          	
+	          </div>
+
+	          <hr/>
+
+	          <div class="user new">
+	          	
+            <h6>Start Date</h6>
+            <input
                     type="date"
-                    className="form-control form-control-lg no-border inner-card"
+                    className="form-control form-control-lg no-border inner-card form-input"
                     name="start_date"
                     value={this.state.start_date}
                     onChange={this.handleChange}
                   />
-                </div>
-                <h6>Estimated End Date</h6>
-                <div className="form-group">
-                  <input
+
+            <h6>Estimated End Date</h6>
+            <input
                     type="date"
-                    className="form-control form-control-lg no-border inner-card"
+                    className="form-control form-control-lg no-border inner-card form-input"
                     name="end_date"
                     value={this.state.end_date}
                     onChange={this.handleChange}
                   />
-                </div>
 
-                <input
+		          		{/* <input type="text" placeholder="First Name" className="form-input"/>
+		          		<input type="text" placeholder="Last Name"/> */}
+                  <input
                   type="submit"
-                  className="btn btn-info btn-block mt-4"
+                  className="sign-submit"
                 />
-              </form>
-            </div>
-          </div>
+		          		
+		          		
+                  </div> 
+	          	</form>
+	             
         </div>
+        </div>
+
+
+
+
+
+
+
+        
       </div>
     );
   }

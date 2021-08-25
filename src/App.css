@@ -1,5 +1,3 @@
-
-
 .topNavbarImage {
   background: url("./resources/LandingPage.png");
   height: 702px;
@@ -114,6 +112,7 @@
 
 .project-forms-margin{
   margin-left: 70px;
+  width: 500px;
 }
 
 .landingTitle{
@@ -141,8 +140,9 @@
 }
 
 .formBackground1{
-background: url("./resources/images\ \(1\).jpeg");
+background: url("./resources/planning-phase.jpg");
 background-repeat:no-repeat;
+background-size: cover;
 }
 
 .formBackground2{
@@ -277,7 +277,7 @@ h2 {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background-color: red;
+  background-color: #f31126;
   margin-top: -330px;
   margin-left: 200px;
 }
@@ -285,7 +285,7 @@ h2 {
 #triangle {
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color:#f31126;
   border-radius: 20px;
   transform: rotate(70deg);
   margin-top: -430px;
@@ -304,3 +304,113 @@ h2 {
   margin-top: 100px;
 }
 
+div.image-wrapper{
+  position: relative; 
+  box-sizing: border-box; 
+  font-family: sans-serif; 
+  background: url(./resources/Project-management.jpg) 0 / cover fixed; 
+  height: 100vh; 
+  overflow: hidden;
+  z-index: 0; 
+  display: flex; 
+  
+  /*border: 2px solid red; */
+}
+
+div.content{
+  color: white; 
+  letter-spacing: 2px; 
+  width: 70%; 
+  max-width: 700px; 
+  border-radius: 10px;
+  /*height: 500px;*/
+  padding: 20px;
+  margin: auto; 
+  /*text-align: center;*/
+  /*border: 2px solid; */
+  display: flex; 
+  /*justify-content: space-between;*/
+  background: -webkit-linear-gradient(57deg, #f31126, rgba(242,221,162));
+  background: linear-gradient(57deg, #f31126, rgba(242,221,162));
+}
+
+
+div.content::before{ 
+  content: ""; 
+  position: absolute; 
+  top: 0; right: 0; bottom: 0; left: 0; 
+  background: rgba(182, 179, 182, 0.4);
+  border: 0;
+  filter: blur(10px);
+  /*filter: opacity(30%); */
+  margin: -5px;
+  z-index: -1;
+}
+
+
+
+hr{
+  height: auto; 
+	border: none;
+	border-left: 1px solid rgba(255,255,255,.4); 
+}
+
+form-project{
+	display: flex;
+	flex-direction: column; 
+  margin: 0 auto;
+	/* align-items: center; */
+	/*border: 2px solid;*/
+	/*width: 40%;*/
+	
+/* 	border: 2px solid white; */
+}
+
+p.sign{
+	font-size: 20px;
+	align-self: flex-start;
+}
+
+
+.form-input{
+	outline: none;
+	margin: 10px 0px;
+	border: 0;
+	border-bottom: 1px solid rgba(255,255,255,.4);
+	background-color: rgba(0,0,0,.001);  
+	padding: 0 auto; 
+	color: white; 
+/* 	border: 2px solid; */
+}
+
+button{
+	border-radius: 5px;
+	cursor: pointer; 
+	margin: 15px 0px 10px; 
+	height: 40px; 
+	outline: none;
+}
+
+.sign-submit{
+	background-color: #FBDB80;
+	border-radius: 5px;
+	font-weight: bold; 
+  margin-top: 20px; 
+
+	
+	/*align-self: flex-start;*/
+	/*border: 2px solid white; */
+}
+
+
+@media only screen and (max-width: 650px) {
+    
+    div.image-wrapper{
+    	overflow: scroll;
+    }
+
+    div.content{
+    	flex-direction: column; 
+    }
+
+}
