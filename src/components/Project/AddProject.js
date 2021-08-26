@@ -46,8 +46,8 @@ class AddProject extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className="image-wrapper">
-          <div className="content">
+        <div className="div-image-wrapper">
+          <div className="div-content">
 	          
             <form onSubmit={this.handleSubmit} className="project-forms-margin form-project">
             <div className="user existing">

@@ -29,28 +29,39 @@ class ProjectTask extends Component {
          }
          
         return (
-            <div className="card mb-1 no-border floating-card-task opacity">
-
-                <div className={`card-header text-primary ${priorityClass}`}>
-                ID: {project_task.projectSequence} -- Priority:{priorityString}
-                </div>
-                <div className="card-body">
-                    <h5 className="card-title">{project_task.summary}</h5>
+            <div>
+                <div className="card-task">
+                    <div id="circle" className={`${priorityClass}`}></div>
+                    <h2>ID: {project_task.projectSequence} {priorityString} Priority</h2>
+                    <div className="row padding-text-card-task">
+                    <div className="col-7 pl-4">
+                    <h5 className="card-title"><b>Summary: </b>{project_task.summary}</h5>
                         <p className="card-text text-truncate ">
-                        {project_task.acceptanceCriteria}
+                        <b>Acceptance Criteria: </b>{project_task.acceptanceCriteria}
                         </p>
                         {project_task.dueDate && 
-                        <p className="card-text text-truncate "> Due Date <span className="text-danger">{project_task.dueDate}</span>
+                        <p className="card-text text-truncate "><b>Due Date: </b><span className="text-danger">{project_task.dueDate}</span>
                         </p>}
-                        
-                        <Link to={`/updateProjectTask/${project_task.projectIdentifier}/${project_task.projectSequence}`} className="btn btn-dark">
-                                            View / Update
+                    </div>
+                    <div className="col-5 pl-0">
+                        <ul>
+                            <li className="list-group-item text-dark bg-transparent no-border ">
+                            <Link to={`/updateProjectTask/${project_task.projectIdentifier}/${project_task.projectSequence}`} className="btn btn-dark">
+                                            Edit
                         </Link>
-
-                    <button className="btn btn-danger ml-4"
-                    onClick={this.onDeleteClick.bind(this, project_task.projectIdentifier,project_task.projectSequence)}>
+                            </li>
+                            <li className="list-group-item text-dark bg-transparent no-border ">
+                            <button className="btn btn-danger"
+                            onClick={this.onDeleteClick.bind(this, project_task.projectIdentifier,project_task.projectSequence)}>
                                             Delete
                         </button>
+                            </li>
+                        </ul>
+                    
+
+                    
+                    </div>  
+                </div>
                 </div>
             </div>
         )
