@@ -39,14 +39,14 @@ body {
   border: none !important;
 }
 
-.opacity{
+/* .opacity{
   opacity: 0.8;
-}
+} */
 
-.project-teal-line{
+/* .project-teal-line{
   margin-top: 5%;
   margin-bottom: 0.5%;
-}
+} */
 
 .navbar-with-line{
   margin: 0 0 1px 0 !important;
@@ -121,6 +121,7 @@ body {
   background-repeat:no-repeat;
   background-size: cover;
 }
+
 
 .login-container{
   background: url("./resources/LoginPage.png");
@@ -423,11 +424,6 @@ hr{
 	display: flex;
 	flex-direction: column; 
   margin: 0 auto;
-	/* align-items: center; */
-	/*border: 2px solid;*/
-	/*width: 40%;*/
-	
-/* 	border: 2px solid white; */
 }
 
 p.sign{
