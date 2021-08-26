@@ -35,10 +35,12 @@ class ProjectTask extends Component {
                     <h2>ID: {project_task.projectSequence} {priorityString} Priority</h2>
                     <div className="row padding-text-card-task">
                     <div className="col-7 pl-4">
-                    <h5 className="card-title"><b>Summary: </b>{project_task.summary}</h5>
+                    <p className="card-title"><b>Summary: </b>{project_task.summary}</p>
+                    {project_task.acceptanceCriteria && 
                         <p className="card-text text-truncate ">
                         <b>Acceptance: </b>{project_task.acceptanceCriteria}
-                        </p>
+                        </p>}
+
                         {project_task.dueDate && 
                         <p className="card-text text-truncate "><b>Due Date: </b><span className="text-danger">{project_task.dueDate}</span>
                         </p>}
