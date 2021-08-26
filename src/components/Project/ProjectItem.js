@@ -58,7 +58,6 @@ class ProjectItem extends Component {
   
   render() {
     const { project } = this.props;
-    // const {teammates} =this.state;
 
     return (
       <div className="container">

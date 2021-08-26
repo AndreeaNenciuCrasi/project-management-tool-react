@@ -51,12 +51,6 @@ class Register extends Component {
         <div>
             <div className="register-container">
                 <div className="row">
-                    {/* <div className="col-md-6"> */}
-                    {/* <h1 className="display-4 text-center form-titles">Sign Up</h1>
-                    <p className="lead text-center form-titles">Create your Account</p> */}
-                    {/* </div> */}
-                    {/* <div className="col-md-6"> */}
-
                     <div className="div-content">
 	          
             <form onSubmit={this.handleSubmit} className="form-project">
@@ -119,72 +113,6 @@ class Register extends Component {
                 />
                   </div> 
 	          	</form>
-        {/* </div> */}
-
-
-
-
-
-
-
-
-
-                    {/* <form onSubmit={this.handleSubmit} 
-                    className=" login-input register-login-form-margin shadow-lg p-3 mb-5 rounded">
-                        <div className="form-group">    
-                            <input type="text" 
-                            className={classnames("form-control form-control-lg", {
-                                "is-invalid": errors.fullName,
-                              })}
-                            placeholder="Name" 
-                            name="fullName"
-                            value={this.state.fullName} 
-                            onChange={this.handleChange}/>
-                            {errors.fullName && (
-                            <div className="invalid-feedback text-white">{errors.fullName}</div>
-                            )}
-                        </div>
-                        <div className="form-group">
-                            <input type="text" 
-                            className={classnames("form-control form-control-lg", {
-                                "is-invalid": errors.username,
-                              })} 
-                            placeholder="Email Address" 
-                            name="username"
-                            value={this.state.username}
-                            onChange={this.handleChange}/>
-                            {errors.username && (
-                            <div className="invalid-feedback text-white">{errors.username}</div>
-                            )}
-                        </div>
-                        <div className="form-group">
-                            <input type="password" 
-                            className={classnames("form-control form-control-lg", {
-                                "is-invalid": errors.password,
-                              })} 
-                            placeholder="Password" 
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}/>
-                            {errors.password && (
-                            <div className="invalid-feedback text-white">{errors.password}</div>
-                            )}
-                        </div>
-                        <div className="form-group">
-                            <input type="password" 
-                            className={classnames("form-control form-control-lg", {
-                                "is-invalid": errors.confirmPassword,
-                              })}  
-                            placeholder="Confirm Password" 
-                            name="confirmPassword"
-                            value={this.state.confirmPassword}
-                            onChange={this.handleChange}/>
-                            {errors.confirmPassword && (
-                            <div className="invalid-feedback text-white">{errors.confirmPassword}</div>
-                            )}
-                        </div>
-                        <input type="submit" className="btn btn-dark btn-block mt-4"/>
-                    </form> */}
                     </div>
                 </div>
             

@@ -49,14 +49,6 @@ class Login extends Component {
             <div>
             <div className="login-container">
                 <div className="row">
-                    {/* <div className="col-md-6">
-            
-                    <h1 className="display-4 text-center form-titles">Log In</h1> */}
-                    {/* <p className="navbar-text-color login-text">Your people may have all the expertise in the world but, if they're not motivated, it's unlikely that they'll achieve their true potential.
-                    On the other hand, work seems easy when people are motivated.
-                    Motivated people have a positive outlook, they're excited about what they're doing, and they know that they're investing their time in something that's truly worthwhile. In short, motivated people enjoy their jobs and perform well.</p> */}
-                    {/* </div> */}
-                    {/* <div className="col-md-6"> */}
                     <div className="div-content">
                     <form onSubmit={this.handleSubmit} 
                     className="form-project">
@@ -89,7 +81,6 @@ class Login extends Component {
                         <input type="submit" className="btn btn-dark btn-block mt-4"/>
                     </form>
                     </div>
-                    {/* </div> */}
                 </div>
             </div>
         </div>

@@ -146,111 +146,11 @@ class UpdateProject extends Component {
                   type="submit"
                   className="btn text-light bg-dark btn-sm"
                 />
-		          		
-		          		
+	
                   </div> 
 	          	</form>
-	             
         </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {/* <div className="container formBackground2">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-            
-              <form onSubmit={this.handleSubmit} className="project-forms-margin">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className={classnames("form-control form-control-lg inner-card", {
-                      "is-invalid": errors.projectName,
-                    })}
-                    placeholder="Project Name"
-                    name="projectName"
-                    value={this.state.projectName}
-                    onChange={this.handleChange}
-                  />
-                  {errors.projectName && (
-                    <div className="invalid-feedback">{errors.projectName}</div>
-                  )}
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className={classnames("form-control form-control-lg inner-card", {
-                      "is-invalid": errors.projectIdentifier,
-                    })}
-                    placeholder="Unique Project ID"
-                    name="projectIdentifier"
-                    value={this.state.projectIdentifier}
-                    disabled
-                  />
-                  {errors.projectIdentifier && (
-                    <div className="invalid-feedback">
-                      {errors.projectIdentifier}
-                    </div>
-                  )}
-                </div>
-
-                <div className="form-group">
-                  <textarea
-                    className={classnames("form-control form-control-lg inner-card", {
-                      "is-invalid": errors.description,
-                    })}
-                    placeholder="Project Description"
-                    name="description"
-                    value={this.state.description}
-                    onChange={this.handleChange}
-                  ></textarea>
-                  {errors.description && (
-                    <div className="invalid-feedback">{errors.description}</div>
-                  )}
-                </div>
-                <h6>Start Date</h6>
-                <div className="form-group">
-                  <input
-                    type="date"
-                    className="form-control form-control-lg no-border inner-card"
-                    name="start_date"
-                    value={this.state.start_date}
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <h6>Estimated End Date</h6>
-                <div className="form-group">
-                  <input
-                    type="date"
-                    className="form-control form-control-lg no-border inner-card"
-                    name="end_date"
-                    value={this.state.end_date}
-                    onChange={this.handleChange}
-                  />
-                </div>
-
-                <input
-                  type="submit"
-                  className="btn btn-info btn-block mt-4"
-                />
-              </form>
-            </div>
-          </div>
-        </div> */}
       </div>
     );
   }

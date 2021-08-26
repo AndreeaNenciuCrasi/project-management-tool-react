@@ -16,7 +16,6 @@ class Landing extends Component {
             <div>
                 <div className="topNavbarImage">
                     <div>
-                        {/* <h1 className="form-titles">This Tool</h1> */}
                         <div className="padding-top">
                         <h1 className="form-titles align-h1">Helps teams</h1>
                          <h1 className="form-titles align-h1">move work forward</h1>
