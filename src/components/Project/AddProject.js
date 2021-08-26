@@ -46,7 +46,7 @@ class AddProject extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <div className="div-image-wrapper">
+        <div className="div-image-wrapper-add-project">
           <div className="div-content">
 	          
             <form onSubmit={this.handleSubmit} className="project-forms-margin form-project">
@@ -121,27 +121,15 @@ class AddProject extends Component {
                     onChange={this.handleChange}
                   />
 
-		          		{/* <input type="text" placeholder="First Name" className="form-input"/>
-		          		<input type="text" placeholder="Last Name"/> */}
                   <input
                   type="submit"
                   className="sign-submit"
                 />
-		          		
-		          		
                   </div> 
 	          	</form>
-	             
         </div>
         </div>
 
-
-
-
-
-
-
-        
       </div>
     );
   }

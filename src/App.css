@@ -124,24 +124,24 @@
   background-size: cover;
 }
 
-.formBackground1{
-background: url("./resources/planning-phase.jpg");
+/* .formBackground1{
+background: url("./resources/AddProject.jpg");
 background-repeat:no-repeat;
 background-size: cover;
-}
+} */
 
-.formBackground2{
-  background: url("./resources/Black-and-white-Trees-Landscapes\ \(1\).jpg");
+/* .formBackground2{
+  background: url("./resources/planning-phase.jpg");
   background-repeat:no-repeat;
-}
+} */
 
 .formBackground3{
-  background: url("./resources/original.jpg");
+  background: url("./resources/AddProject.jpg");
   background-repeat:no-repeat;
 }
 
 .formBackground4{
-  background: url("./resources/tree2.jpg");
+  background: url("./resources/AddProject.jpg");
   padding-right: 10px;
   margin-left: 190px;
   background-repeat:no-repeat;
@@ -332,17 +332,46 @@ h2 {
   padding-top: 55px;
 }
 
-.div-image-wrapper{
+.div-image-wrapper-add-project{
   position: relative; 
   box-sizing: border-box; 
   font-family: sans-serif; 
-  background: url(./resources/Project-management.jpg) 0 / cover fixed; 
+  background: url(./resources/AddProject.jpg) 0 / cover fixed; 
   height: 100vh; 
   overflow: hidden;
   z-index: 0; 
   display: flex; 
   
   /*border: 2px solid red; */
+}
+
+.div-image-wrapper-update-project{
+  position: relative; 
+  box-sizing: border-box; 
+  font-family: sans-serif; 
+  background: url(./resources/UpdateProject.jpg) 0 / cover fixed; 
+  height: 100vh; 
+  overflow: hidden;
+  z-index: 0; 
+  display: flex;
+}
+
+.div-image-wrapper-add-task{
+   
+  font-family: sans-serif; 
+  height: 100vh; 
+  z-index: 0; 
+  display: flex; 
+  position: relative;
+}
+
+.bg-img-add-task{
+  background: url(./resources/AddProject.jpg) 0 / cover fixed; 
+  overflow: hidden;
+   
+  box-sizing: border-box;
+  
+  
 }
 
 .div-content{
@@ -357,7 +386,6 @@ h2 {
   /*text-align: center;*/
   /*border: 2px solid; */
   display: flex; 
-  /*justify-content: space-between;*/
   background: -webkit-linear-gradient(57deg, #f31126, rgba(242,221,162));
   background: linear-gradient(57deg, #f31126, rgba(242,221,162));
 }

@@ -66,12 +66,114 @@ class UpdateProject extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="project">
-        <div className="container formBackground2">
+      <div>
+          <div className="div-image-wrapper-update-project">
+          <div className="div-content">
+	          
+            <form onSubmit={this.handleSubmit} className="project-forms-margin form-project">
+            <div className="user existing">
+	          		    <p className="sign">Edit Project</p>
+                    <input
+                    type="text"
+                    className={classnames("form-control form-control-lg inner-card form-input", {
+                      "is-invalid": errors.projectName,
+                    })}
+                    placeholder="Project Name"
+                    name="projectName"
+                    value={this.state.projectName}
+                    onChange={this.handleChange}
+                  />
+                  {errors.projectName && (
+                    <div className="invalid-feedback">{errors.projectName}</div>
+                  )}
+
+                  <input
+                    type="text"
+                    className={classnames("form-control form-control-lg inner-card form-input", {
+                      "is-invalid": errors.projectIdentifier,
+                    })}
+                    placeholder="Unique Project ID"
+                    name="projectIdentifier"
+                    value={this.state.projectIdentifier}
+                    onChange={this.handleChange}
+                    disabled
+                  />
+                  {errors.projectIdentifier && (
+                    <div className="invalid-feedback">
+                      {errors.projectIdentifier}
+                    </div>
+                  )}
+		          		
+		  
+                  <textarea
+                    className={classnames("form-control form-control-lg inner-card form-input", {
+                      "is-invalid": errors.description,
+                    })}
+                    placeholder="Project Description"
+                    name="description"
+                    value={this.state.description}
+                    onChange={this.handleChange}
+                  ></textarea>
+                  {errors.description && (
+                    <div className="invalid-feedback">{errors.description}</div>
+                  )}
+	          	
+	          </div>
+
+	          <hr/>
+
+	          <div class="user new">
+	          	
+            <h6>Start Date</h6>
+            <input
+                    type="date"
+                    className="form-control form-control-lg no-border inner-card form-input"
+                    name="start_date"
+                    value={this.state.start_date}
+                    onChange={this.handleChange}
+                  />
+
+            <h6>Estimated End Date</h6>
+            <input
+                    type="date"
+                    className="form-control form-control-lg no-border inner-card form-input"
+                    name="end_date"
+                    value={this.state.end_date}
+                    onChange={this.handleChange}
+                  />
+                  
+                  <input
+                  type="submit"
+                  className="sign-submit"
+                />
+		          		
+		          		
+                  </div> 
+	          	</form>
+	             
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <div className="container formBackground2">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h5 className="display-4 text-center">Update Project form</h5>
-              <hr></hr>
+            
               <form onSubmit={this.handleSubmit} className="project-forms-margin">
                 <div className="form-group">
                   <input
@@ -148,7 +250,7 @@ class UpdateProject extends Component {
               </form>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
