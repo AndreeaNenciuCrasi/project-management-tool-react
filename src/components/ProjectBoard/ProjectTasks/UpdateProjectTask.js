@@ -104,7 +104,7 @@ class UpdateProjectTask extends Component {
                                         value={this.state.summary}
                                         onChange={this.handleChange} />
                                     {errors.summary && (
-                                    <div className="invalid-feedback">{errors.summary}</div>
+                                    <div className="invalid-feedback text-white">{errors.summary}</div>
                                 )}
 
                             <textarea className="form-control form-control-lg no-border inner-card form-input"

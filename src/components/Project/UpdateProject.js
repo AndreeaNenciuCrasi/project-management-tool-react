@@ -84,7 +84,7 @@ class UpdateProject extends Component {
                     onChange={this.handleChange}
                   />
                   {errors.projectName && (
-                    <div className="invalid-feedback">{errors.projectName}</div>
+                    <div className="invalid-feedback text-white">{errors.projectName}</div>
                   )}
 
                   <input
@@ -99,7 +99,7 @@ class UpdateProject extends Component {
                     disabled
                   />
                   {errors.projectIdentifier && (
-                    <div className="invalid-feedback">
+                    <div className="invalid-feedback text-white">
                       {errors.projectIdentifier}
                     </div>
                   )}
@@ -115,7 +115,7 @@ class UpdateProject extends Component {
                     onChange={this.handleChange}
                   ></textarea>
                   {errors.description && (
-                    <div className="invalid-feedback">{errors.description}</div>
+                    <div className="invalid-feedback text-white">{errors.description}</div>
                   )}
 	          	
 	          </div>
