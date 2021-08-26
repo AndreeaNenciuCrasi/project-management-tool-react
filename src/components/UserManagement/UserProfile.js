@@ -61,7 +61,84 @@ class UserProfile extends Component {
         const { errors } = this.state;
         return (
         <div className="container">
-            <div className="row first-row-hight">
+                <div class="page">
+     <div class="profile-card">
+       <div class="profile-image">
+       <span class="image"></span>
+       </div>
+       <div class="profile-user-name">
+       <h3>{this.state.fullName}</h3>
+         <p>Front End Developer</p>
+       </div>
+       <div class="skills">
+       <form onSubmit={this.handleSubmit}>
+                            
+                            <input type="text" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.fullName,
+                              })}
+                            placeholder="Name" 
+                            name="fullName"
+                            value={this.state.fullName}
+                            onChange={this.handleChange}
+                            />
+                            {errors.fullName && (
+                            <div className="invalid-feedback">{errors.fullName}</div>
+                            )}
+                        
+                        
+                            <input type="text" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.username,
+                              })} 
+                            placeholder="Email Address" 
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.handleChange}
+                            />
+                            {errors.username && (
+                            <div className="invalid-feedback">{errors.username}</div>
+                            )}
+                            <hr></hr>
+                            <textarea className="textarea-user-profile" type="text" 
+                            placeholder="notes" 
+                            name="notes"
+                            value={this.state.notes}
+                            onChange={this.handleChange}
+                            />
+                        
+                    
+                            <input type="password" 
+                            className={classnames("form-control form-control-lg", {
+                                "is-invalid": errors.password,
+                              })} 
+                            placeholder="Password" 
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                            />
+                            {errors.password && (
+                            <div className="invalid-feedback">{errors.password}</div>
+                            )}
+                        
+                        
+                        <input type="submit" className="btn btn-info btn-block mt-4"/>
+                    </form>
+       </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+            {/* <div className="row first-row-hight">
                 <div className="col-6 col-md-4 bg-userProfile1"></div>
                 <div className="col-6 col-md-4">
                     <div className="bg-form-userProfile">
@@ -131,7 +208,7 @@ class UserProfile extends Component {
                 <div className="col-6 col-md-4 bg-dark text-dark"></div>
                 <div className="col-6 col-md-4 bg-dark text-dark"></div>
                 <div className="col-6 col-md-4 bg-dark text-dark"></div>
-            </div>
+            </div> */}
 
 
             {/* <div className="row row-hight">
@@ -139,8 +216,8 @@ class UserProfile extends Component {
                 <div className="col-6 col-md-4 "></div>
                 <div className="col-6 col-md-4"></div>
             </div> */}
-            <br></br>
-            <br></br>
+            {/* <br></br>
+            <br></br> */}
         </div>
         )
     }

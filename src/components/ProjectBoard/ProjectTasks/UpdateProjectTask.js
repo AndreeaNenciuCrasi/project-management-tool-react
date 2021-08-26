@@ -150,7 +150,7 @@ class UpdateProjectTask extends Component {
 
                   <input
                   type="submit"
-                  className="sign-submit"
+                  className="btn text-light bg-dark btn-sm"
                 />
                   </div> 
 	          	</form>

@@ -240,14 +240,14 @@ body {
 }
 
 body:hover .card {
-  filter: blur(15px);
+  /* filter: blur(15px); */
   transform: scale(0.9);
   opactiy: 0.5;
   transition: 0.9s;
 }
 
 body:hover .card-task{
-  filter: blur(15px);
+  /* filter: blur(15px); */
   transform: scale(0.9);
   opactiy: 0.5;
   transition: 0.9s;
@@ -463,10 +463,118 @@ button{
 	border-radius: 5px;
 	font-weight: bold; 
   margin-top: 20px; 
-
-	
-	/*align-self: flex-start;*/
-	/*border: 2px solid white; */
 }
+
+.profile-card {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.14), 0 1px 20px 0 rgba(0, 0, 0, 0.12), 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  max-width: 380px;  
+  overflow: hidden;
+  position: absolute;  
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;  
+  padding: 4rem 0 0; 
+  border: 0;
+}
+
+.profile-card:after {
+  background-color: #f31126;
+  border-radius: 50%;
+  content: '';
+  height: 48px;
+  left: 50%;
+  position: absolute;  
+  right: 0;
+  width: 60px;  
+  top: -13rem;
+  transition: transform 0.5s cubic-bezier(.42,.04,.13,.92);
+  transform: translateX(-50%) scale(14);
+  z-index: -1;
+}
+
+.profile-card:hover:after {
+  transform: scale(35)
+}
+.profile-card:hover .profile-image .image {  
+  /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+  animation: 5s cubic-bezier(.42,.04,.13,.92) 1s infinite alternate dp-animation 
+}
+.profile-card:hover .profile-user-name h3 {
+  color: #fff;
+}
+
+.profile-card:hover .profile-user-name p {
+  color: #fff;
+}
+.profile-card:hover .skills table tr td {
+  color: #fff;
+}
+.profile-card:hover .lnr {
+  color: #fff;
+}
+.profile-image {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-image .image {
+  background-image: url('https://randomuser.me/api/portraits/men/42.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 5px solid #e6e6e6;
+  border-radius: 50%;
+  display: inline-block;
+  height: 150px;
+  width: 150px; 
+}
+
+.profile-user-name {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.profile-user-name h3{
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #333;
+}
+
+.profile-user-name p{
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: #999;
+  font-weight: 600;
+}
+
+.skills {
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.textarea-user-profile{
+  width: 360px;
+}
+
+
+/* @keyframes dp-animation{
+  0% {
+    box-shadow: 1px 1px 20px rgba(255,255,255,0.8);    
+  }
+  20% {    
+    box-shadow: 1px 1px 10px rgba(255,255,255,0.8);
+  }
+  50% {    
+    box-shadow: 1px 1px 15px rgba(255,255,255,0.8);
+  }
+  80% {    
+    box-shadow: 1px 1px 10px rgba(255,255,255,0.8);
+  }
+} */
 
 
