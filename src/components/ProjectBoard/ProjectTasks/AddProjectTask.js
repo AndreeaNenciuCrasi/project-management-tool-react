@@ -50,7 +50,6 @@ class AddProjectTask extends Component {
         return (
             <div>
                 <div className="bg-img-add-task">
-
                 <div className="container">
                 <Link to={`/projectBoard/${id}`} className="btn text-light bg-dark">
                         Back to Project Board

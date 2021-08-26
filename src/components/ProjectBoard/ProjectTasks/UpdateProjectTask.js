@@ -80,14 +80,99 @@ class UpdateProjectTask extends Component {
      render() {
          const { errors } = this.state;
         return (
-    <div classNameName="">
-        <div classNameName="container">
+            <div>
+                <div className="bg-img-update-task">
+                <div classNameName="container">
                 <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn text-light bg-dark btn-margin">
                         Back to Project Board
                     </Link>
         </div>
         <br></br>
-        <div classNameName="container border">
+
+        <div className="div-image-wrapper-update-task">
+          <div className="div-content">
+	          
+            <form onSubmit={this.handleSubmit} className="project-forms-margin form-project">
+            <div className="user existing">
+	          		    <p className="sign">Edit Task | {this.state.projectSequence}</p>
+                          <input type="text"
+                                        className={classnames("form-control form-control-lg inner-card", {
+                                            "is-invalid": errors.summary
+                                        })}
+                                        name="summary"
+                                        placeholder="Project Task summary"
+                                        value={this.state.summary}
+                                        onChange={this.handleChange} />
+                                    {errors.summary && (
+                                    <div className="invalid-feedback">{errors.summary}</div>
+                                )}
+
+                            <textarea className="form-control form-control-lg no-border inner-card form-input"
+                                        placeholder="Acceptance Criteria"
+                                        name="acceptanceCriteria"
+                                        value={this.state.acceptanceCriteria}
+                                        onChange={this.handleChange}></textarea>
+		          		
+		  
+                          <h6>Due Date</h6>
+                        
+                            <input type="date"
+                                        className="form-control form-control-lg no-border inner-card"
+                                        name="dueDate"
+                                        value={this.state.dueDate}
+                                        onChange={this.handleChange}/>
+	          	
+	          </div>
+
+	          <hr/>
+
+	          <div class="user new">
+	          	
+              <select className="form-control form-control-lg no-border inner-card form-input"
+                                        name="priority"
+                                        value={this.state.priority}
+                                        onChange={this.handleChange}>
+                                <option value={0}>Select Priority</option>
+                                <option value={1}>High</option>
+                                <option value={2}>Medium</option>
+                                <option value={3}>Low</option>
+                            </select>
+
+                            <select className="form-control form-control-lg no-border inner-card form-input"
+                                        name="status"
+                                        value={this.state.status}
+                                        onChange={this.handleChange}>
+                                <option value="">Select Status</option>
+                                <option value="TO_DO">TO DO</option>
+                                <option value="IN_PROGRESS">IN PROGRESS</option>
+                                <option value="DONE">DONE</option>
+                            </select>
+
+                  <input
+                  type="submit"
+                  className="sign-submit"
+                />
+                  </div> 
+	          	</form>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <div classNameName="container border">
         <div class="row">
             <div class="col formBackground4"></div>
             <div class="col update-form">
@@ -157,7 +242,7 @@ class UpdateProjectTask extends Component {
                     </form>
 </div>
             </div>
-            </div>
+            </div> */}
         </div>
     
         )

@@ -357,7 +357,6 @@ h2 {
 }
 
 .div-image-wrapper-add-task{
-   
   font-family: sans-serif; 
   height: 100vh; 
   z-index: 0; 
@@ -368,10 +367,21 @@ h2 {
 .bg-img-add-task{
   background: url(./resources/AddProject.jpg) 0 / cover fixed; 
   overflow: hidden;
-   
   box-sizing: border-box;
-  
-  
+}
+
+.bg-img-update-task{
+  background: url(./resources/UpdateProject.jpg) 0 / cover fixed; 
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.div-image-wrapper-update-task{
+  font-family: sans-serif; 
+  height: 100vh; 
+  z-index: 0; 
+  display: flex; 
+  position: relative;
 }
 
 .div-content{
