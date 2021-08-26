@@ -80,7 +80,7 @@ class ProjectItem extends Component {
                 <b>Add: </b>
                     <input type="text" value={this.state.value} onChange={this.handleChange} 
                     placeholder="TeamMate"/>        </label>
-                    <input type="submit" value="Submit" className="btn text-light bg-info btn-sm ml-2" />
+                    <input type="submit" value="Submit" className="btn text-light bg-info btn-sm ml-3" />
               </form>
               </div>
           </div>

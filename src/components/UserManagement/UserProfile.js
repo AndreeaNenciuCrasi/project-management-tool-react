@@ -108,7 +108,7 @@ class UserProfile extends Component {
                             />
                         
                     
-                            <input type="password" 
+                            <input type="password" hidden
                             className={classnames("form-control form-control-lg", {
                                 "is-invalid": errors.password,
                               })} 
