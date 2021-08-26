@@ -46,16 +46,6 @@
   margin: 0 0 1px 0 !important;
 }
 
-.floating-card-task{
-  background: url("./resources/930911675ea18c404e23146217a9001c.jpg");
-  -webkit-box-shadow: 20px 20px 10px 0px grey;
-  -moz-box-shadow: 20px 20px 10px 0px grey;
-  box-shadow: 20px 20px 10px 0px grey;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-
-
 .project-buttons-set{
   width: 210px;
 }
@@ -68,8 +58,9 @@
   width: 300px;
 }
 
-.register-form-margin{
-  /* margin-left: 500px; */
+.register-login-form-margin{
+  background: -webkit-linear-gradient(57deg, #f31126, rgba(242,221,162));
+  background: linear-gradient(57deg, #f31126, rgba(242,221,162));
   width: 80%;
   opacity: 0.95;
   margin-bottom: 70px;
@@ -82,12 +73,6 @@
 
 .navbar-text-color{
   color: #f31126!important;
-}
-
-.login-form-margin{
-  width: 80%;
-  opacity: 0.95;
-  margin-bottom: 70px;
 }
 
 .login-text{

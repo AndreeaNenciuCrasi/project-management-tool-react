@@ -58,7 +58,7 @@ class Login extends Component {
                     </div>
                     <div className="col-md-6">
                     <form onSubmit={this.handleSubmit} 
-                    className="login-input login-form-margin shadow-lg p-3 mb-5 bg-white rounded">
+                    className="login-input register-login-form-margin shadow-lg p-3 mb-5 rounded">
                         <div className="form-group">
                             <input type="text" 
                             className={classnames("form-control form-control-lg", {
