@@ -435,7 +435,8 @@ button{
 }
 
 .sign-submit{
-	background-color: #FBDB80;
+	background-color: teal;
+  color: white;
 	border-radius: 5px;
 	font-weight: bold; 
   margin-top: 20px; 
