@@ -239,7 +239,7 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 350px;
-  width: 400px;
+  width: 370px;
   border-radius: 25px;
   background-color: #ffffff;
   box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
@@ -294,6 +294,10 @@ h2.card-task{
   color: #ffffff;
   mix-blend-mode: difference;
 
+}
+
+.card-status{
+  width: 400px;
 }
 h2 {
   position: absolute;

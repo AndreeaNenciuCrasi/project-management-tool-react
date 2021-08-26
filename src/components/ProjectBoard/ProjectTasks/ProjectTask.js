@@ -37,7 +37,7 @@ class ProjectTask extends Component {
                     <div className="col-7 pl-4">
                     <h5 className="card-title"><b>Summary: </b>{project_task.summary}</h5>
                         <p className="card-text text-truncate ">
-                        <b>Acceptance Criteria: </b>{project_task.acceptanceCriteria}
+                        <b>Acceptance: </b>{project_task.acceptanceCriteria}
                         </p>
                         {project_task.dueDate && 
                         <p className="card-text text-truncate "><b>Due Date: </b><span className="text-danger">{project_task.dueDate}</span>
