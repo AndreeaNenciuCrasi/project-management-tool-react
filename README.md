@@ -8,34 +8,35 @@ Frontend Technologies: Bootstrap, React, Redux
 
 
 Landing page:
-![LandingPage](https://user-images.githubusercontent.com/50443910/122561531-a6d3fc80-d04a-11eb-8504-19045b094218.png)
+![landing](https://user-images.githubusercontent.com/50443910/131117637-bd23fc1e-d017-4cac-bbbf-29fb6a303736.png)
 
 
 
 Sign Up page:
-![SignUp](https://user-images.githubusercontent.com/50443910/122561654-c9661580-d04a-11eb-8442-74cbcf966eb8.png)
+![register](https://user-images.githubusercontent.com/50443910/131117731-3b2122b2-ce21-49eb-a109-d5ebd5a2f1af.png)
 
 
 
 Log In page:
-![LogIn](https://user-images.githubusercontent.com/50443910/122561762-e8fd3e00-d04a-11eb-9c77-2748f98c6ede.png)
+![login](https://user-images.githubusercontent.com/50443910/131117896-1518277e-5d2b-4a2b-90df-f680a747c163.png)
 
 
 
 DashBoard:
-![dashboard](https://user-images.githubusercontent.com/50443910/122893595-231e5680-d34f-11eb-9730-72c4a5a726b3.png)
+![projects](https://user-images.githubusercontent.com/50443910/131117968-2841ee6c-daa2-46b5-ad90-842135fbfd6f.png)
 
 
 
-Backlog:
-![Backlog](https://user-images.githubusercontent.com/50443910/122562046-442f3080-d04b-11eb-9635-97d32d7e28ac.png)
+Project Board:
+![project board](https://user-images.githubusercontent.com/50443910/131118056-4cd5ecd8-860d-48d4-98f5-74f8ec115c1e.png)
 
 
 
 Create Project Form:
-![CreateProjectForm](https://user-images.githubusercontent.com/50443910/122562118-5f9a3b80-d04b-11eb-98a4-7de7187e33d5.png)
+![form](https://user-images.githubusercontent.com/50443910/131118191-8707e7ac-a2e5-43cf-ad5e-40625556b5ff.png)
 
 
 
-Create Task Form:
-![AddProjectTask](https://user-images.githubusercontent.com/50443910/122562217-80629100-d04b-11eb-96f7-8983ad724b98.png)
+User Profile:
+![user profile](https://user-images.githubusercontent.com/50443910/131118286-064c39c3-c230-4969-bad5-d8ef3c384653.png)
+
